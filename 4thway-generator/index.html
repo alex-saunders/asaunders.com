@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="4thway Generator">
+    <meta name="author" content="Alex Saunders">
+    <title>Index</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Non-boostrap styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+
+<div class="modal fade bd-example-modal-sm" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                Getting Pages...
+                <br /><br/>
+                <div class="col-xs-12 col-sm-12 progress-container">
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-default" style="width:0%" id="progress-bar"></div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- ================== TEMPLATES =================== -->
+<!-- New 4thway Container Template -->
+<div class="container-4thway template">
+    <div class="padding-fix panel-body">
+    </div>
+</div>
+
+<!-- New Skins Container Template -->
+<div class="new-skins-container template">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Skins (optional)
+        </div>
+        <div class="panel-body">
+            <div class="padding-fix">
+                <div class="input-group">
+								<span class="input-group-addon">
+								<span class="glyphicon glyphicon-picture" aria-hidden="true"></span> &nbsp;Image Path </span>
+								<span class="input-group-addon dummy-link">
+								http://content.<span class="custom-url"></span>/ </span>
+                    <input type="text" class="form-control skins-input" placeholder=". . .">
+                </div>
+                <!-- /input-group -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Banners Container Template -->
+<div class="new-banners-container template">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Banners
+        </div>
+        <div class="panel-body">
+            <div class="new-banners very">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Banner
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> &nbsp;Image Path
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> &nbsp; Title
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+
+                    <!-- New Banner Template -->
+                    <tr class="new-banner template">
+                        <td class="banner-header">
+                            1
+                        </td>
+                        <td>
+                            <input type="text" class="form-control image new-banner image-path" placeholder="Image Path" aria-describedby="basic-addon1">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control image new-banner link" placeholder="Link" aria-describedby="basic-addon1">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control image new-banner title" placeholder="Title" aria-describedby="basic-addon1">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-default btn-sm remove-banner" onclick="removeBannerInputGroup(this)">
+                                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm add-banner" onclick="addBannerInputGroup(this)">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary generate-4thway" onclick="generate4thway(this)">
+        <span class="glyphicon glyphicon-ok " aria-hidden="true"></span> &nbsp;Generate 4thway </button>
+    <br/><br/>
+</div>
+
+<!-- 4thway Preview Panel -->
+<div class="panel panel-info 4thway-preview template">
+    <div class="panel-heading">
+        Generated 4thway
+    </div>
+    <div class="panel-body">
+        <div class="padding-fix">
+            <code>
+                <xmp class="generated-4thway-code">
+                </xmp>
+            </code>
+            <button type="button" class="btn btn-secondary" onclick="selectAll(this)">
+                <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> &nbsp;Select All </button>
+            <button type="button" class="btn btn-secondary" onclick="copy(this)">
+                <span class="glyphicon glyphicon-copy " aria-hidden="true"></span> &nbsp;Copy</button>
+        </div>
+    </div>
+</div>
+<!-- ====================== ./TEMPLATES ================= -->
+
+<div class="container">
+<ol class="breadcrumb">
+    <li><a href="http://www.asaunders.com">V1.0.0 (Alex Saunders)</a></li>
+</ol>
+<div class="logo">
+</div>
+<h1>
+    (Basic) 4thway <small>
+    Generator </small>
+</h1>
+<!-- Main Panel -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Page Details</h3>
+    </div>
+    <div class="padding-fix">
+        <label for="very-url">Very URL (optional) </label>
+        <div class="input-group">
+				<span class="input-group-addon" id="very-address">
+				<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+				http://www.very.co.uk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="text" class="form-control" id="very-url" placeholder="Very Page (Blank = Homepage)" aria-describedby="basic-addon1">
+        </div>
+        <label for="lw-url">Littlewoods URL (optional)</label>
+        <div class="input-group">
+				<span class="input-group-addon" id="lw-address">
+				<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+				http://www.littlewods.com</span>
+            <input type="text" class="form-control" id="lw-url" placeholder="LW Page (Blank = Homepage)" aria-describedby="basic-addon1">
+        </div>
+        <br/>
+        <p>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default function-selector edit" onclick="loadEdit4thwayPanel()"
+                    data-toggle="modal" data-target="#myModal">
+                <span class="glyphicon glyphicon-import" aria-hidden="true"></span>
+                Get Page(s) </button>
+            <button type="button" class="btn btn-default function-selector new" onclick="loadNew4thwayPanel()">
+                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                New 4thway </button>
+        </div>
+        <br/><br/>
+        <div class="well well-sm">
+            (Either edit an existing 4thway that sits on the page(s) linked above, or start a new 4thway) <br />
+            (Editing exisiting 4thways is still quite buggy, don't expect perfect retrieval of 4thways)
+        </div>
+        </p>
+    </div>
+    <!-- /.padding-fix -->
+</div>
+<!-- /.main panel -->
+<!-- Retrieved 4thway(s) panel -->
+<div class="panel panel-info" id="retrieved-4thway-panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Retrieved 4thways</h3>
+    </div>
+    <div class="padding-fix">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="dropdown 4thway-container-tab very">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Very <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="tab-link" id="default-selected">
+                        <a brand="very" type="desktop" new4thway="false">Desktop</a>
+                    </li>
+                    <li class="tab-link">
+                        <a brand="very" type="mobile" new4thway="false">Mobile</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li role="presentation" class="dropdown 4thway-container-tab littlewoods">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Littlewoods <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="tab-link" id="default-selected">
+                        <a brand="littlewoods" type="desktop" new4thway="false">Desktop</a>
+                    </li>
+                    <li class="tab-link">
+                        <a brand="littlewoods" type="mobile" new4thway="false">Mobile</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /.retrieved 4thway panel -->
+<!-- New 4thway(s) panel -->
+<div class="panel panel-info" id="new-4thway-panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">New 4thway</h3>
+    </div>
+    <div class="padding-fix">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="dropdown 4thway-container-tab">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Very <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="tab-link" id="default-selected">
+                        <a brand="very" type="desktop" new4thway="true">Desktop</a>
+                    </li>
+                    <li class="tab-link">
+                        <a brand="very" type="mobile" new4thway="true">Mobile</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li role="presentation" class="dropdown 4thway-container-tab">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Littlewoods <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="tab-link" id="default-selected">
+                        <a brand="littlewoods" type="desktop" new4thway="true">Desktop</a>
+                    </li>
+                    <li class="tab-link">
+                        <a brand="littlewoods" type="mobile" new4thway="true">Mobile</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <div class="container-4thway lw-new">
+            <div class="padding-fix">
+                new lw 4thway
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /. new 4thway panel -->
+</div>
+<!-- /.container -->
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Custom JS -->
+<script src="js/scripts.js" type="text/JavaScript"></script>
+</body>
+</html>
