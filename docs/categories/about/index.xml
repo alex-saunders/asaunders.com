@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Alex Saunders</title>
-    <link>https://alex-saunders.github.io/portfolio/categories/about/index.xml</link>
+    <link>https://alex-saunders.github.io/categories/about/index.xml</link>
     <description>Recent content in About on Alex Saunders</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://alex-saunders.github.io/portfolio/categories/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alex-saunders.github.io/categories/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>https://alex-saunders.github.io/portfolio/about/</link>
+      <link>https://alex-saunders.github.io/about/</link>
       <pubDate>Sat, 22 Aug 2015 06:42:21 -0700</pubDate>
       
-      <guid>https://alex-saunders.github.io/portfolio/about/</guid>
+      <guid>https://alex-saunders.github.io/about/</guid>
       <description>&lt;p&gt;Along with &lt;a href=&#34;https://en.wikipedia.org/wiki/Ford_Prefect_(character)&#34;&gt;Ford Prefect&lt;/a&gt;, Dent barely escapes the Earth&amp;rsquo;s destruction as it is demolished to make way for a &lt;em&gt;hyperspace bypass&lt;/em&gt;. Arthur spends the next several years, still wearing his dressing gown, helplessly launched from crisis to crisis while trying to straighten out his lifestyle.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -28,15 +28,16 @@
     
     <item>
       <title>About me</title>
-      <link>https://alex-saunders.github.io/portfolio/</link>
+      <link>https://alex-saunders.github.io/</link>
       <pubDate>Sat, 22 Aug 2015 06:42:21 -0700</pubDate>
       
-      <guid>https://alex-saunders.github.io/portfolio/</guid>
+      <guid>https://alex-saunders.github.io/</guid>
       <description>
 
 &lt;h1 id=&#34;hi&#34;&gt;👋 Hi!&lt;/h1&gt;
 
-&lt;p&gt;Paragraphs are separated by a blank line.&lt;/p&gt;
+&lt;p&gt;(test)
+Paragraphs are separated by a blank line.&lt;/p&gt;
 
 &lt;p&gt;2nd paragraph. &lt;em&gt;Italic&lt;/em&gt;, &lt;strong&gt;bold&lt;/strong&gt;, and &lt;code&gt;monospace&lt;/code&gt;. Itemized lists
 look like:&lt;/p&gt;
