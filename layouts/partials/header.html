@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 {{ partial "head.html" . }}
+{{ partial "side-drawer.html" . }}
 {{ $urlSlices := split .RelPermalink "/" }}
 
 <body lang="{{ .Site.Params.lang }}">
@@ -10,7 +11,11 @@
   <nav class="site-nav-container">
       <a href="{{ .Site.BaseURL }}" class="logo-container"><img class="logo" src="{{ .Site.BaseURL }}/img/logo.jpg" /></a>
       <div class="site-nav">
-        <div class="wide-nav">
+        <div class="nav-sm">
+          <a id="side-drawer-cta"><i class="icon ion-navicon"></i></a>
+        </div>
+
+        <div class="nav-lg">
           <div class="left-aligned">
             <a href="{{ .Site.BaseURL }}" {{ if (eq .RelPermalink "/") }}class="selected"{{ end }}>About Me</a>
             <a href="{{ .Site.BaseURL }}/projects/" {{ if or (in $urlSlices "projects") (in $urlSlices "tags") }}class="selected"{{ end }}>Projects</a>
@@ -40,7 +45,7 @@
           </div>
           <div class="right-aligned">
             <p>
-              Alex Saunders
+              {{ .Site.Title }}
             </p>
             {{ if .Site.RSSLink }}
                 <a href="{{ .Site.RSSLink }}" target="_blank">
