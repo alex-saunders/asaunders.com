@@ -48,13 +48,13 @@ a {
   width: 100%;
   height: 100px;
   z-index: 99999;
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   @media #{$mobile} { padding: 0px 10px 0px 10px; }
   @media #{$not-mobile} { padding: 0px 20px 0px 20px; }
 
   .site-nav-container {
     position: relative;
     height: 100%;
+    border-bottom: 1px solid $accent-3;
 
     .logo-container {
       padding: 10px;
