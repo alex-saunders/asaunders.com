@@ -1,0 +1,20 @@
+{
+  "name": "asaunders.com",
+  "version": "1.0.0",
+  "description": "Portfolio website built with Hugo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w src/ -o static/css/",
+    "dev": "concurrently --kill-others \"npm run sass\" \"hugo server --watch\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Saunders",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "node-sass": "^4.1.1"
+  },
+  "dependencies": {
+    "s3-folder-upload": "0.0.14"
+  }
+}

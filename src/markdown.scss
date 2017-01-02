@@ -1,0 +1,166 @@
+$desktop: "screen and (min-width: 980px)";
+$tablet: "screen  and (max-width: 979px)";
+$not-mobile: "screen and (min-width: 600px)";
+$mobile: "screen and (max-width: 600px)";
+
+section.main .content .markdown h1,
+section.main .content .markdown h2,
+section.main .content .markdown h3,
+section.main .content .markdown h4,
+section.main .content .markdown h5,
+section.main .content .markdown h6 {
+  font-size: 150%;
+  letter-spacing: -0.005rem;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+  text-transform: none;
+  margin-top: 1.75rem;
+}
+section.main .content .markdown h1 {
+  font-size: 175%;
+  margin-bottom: 2rem;
+}
+section.main .content .markdown h2 {
+  font-size: 150%;
+  margin-bottom: 1.5rem;
+}
+section.main .content .markdown h3 {
+  font-size: 100%;
+  margin-bottom: 1rem;
+}
+section.main .content .markdown h4,
+section.main .content .markdown h5,
+section.main .content .markdown h6 {
+  font-size: 100%;
+  margin-bottom: 1rem;
+  letter-spacing: none;
+}
+section.main .content .markdown code,
+section.main .content .markdown pre {
+  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-size: 0.98rem;
+  background-color: #f7f7f7;
+}
+section.main .content .markdown code {
+  /* enclosed by single backtick (`) */
+  padding: .15em .5em;
+  border-radius: 2px;
+}
+section.main .content .markdown pre {
+  /* Hugo specific: consider using the 'highlight' shortcode */
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  line-height: 1.5em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+section.main .content .markdown pre code {
+  /* enclosed by 4 backticks (````) */
+  padding: 0;
+  font-size: 0.9rem;
+}
+section.main .content .markdown a:hover {
+  text-decoration: underline;
+}
+section.main .content .markdown a code {
+  color: #428bca !important;
+}
+section.main .content .markdown a code:hover {
+  text-decoration: underline;
+}
+section.main .content .markdown p {
+  font-size: 100%;
+  text-align: justify;
+  line-height: 1.75em;
+  color: #313537;
+  letter-spacing: 0.01rem;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+section.main .content .markdown ul,
+section.main .content .markdown ol,
+section.main .content .markdown dl {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+section.main .content .markdown dt {
+  font-weight: bold;
+}
+section.main .content .markdown dd {
+  margin-bottom: .5rem;
+}
+section.main .content .markdown ul {
+  margin-bottom: 1.25rem;
+}
+section.main .content .markdown li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+section.main .content .markdown em {
+  font-style: italic;
+}
+section.main .content .markdown strong {
+  font-weight: 700;
+}
+section.main .content .markdown hr {
+  position: relative;
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid #808080;
+  border-top: 1px solid #999999;
+}
+section.main .content .markdown abbr {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #666666;
+  text-transform: uppercase;
+}
+section.main .content .markdown abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #808080;
+}
+section.main .content .markdown blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+}
+section.main .content .markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+section.main .content .markdown blockquote {
+  padding-right: 5rem;
+  padding-left: 1.25rem;
+}
+section.main .content .markdown p {
+font-size: 100%;
+}
+section.main .content .markdown img {
+  margin: 1rem 0;
+  max-width: 100%;
+}
+section.main .content .markdown table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  table-layout: fixed;
+  word-break: break-word;
+  border-collapse: collapse;
+}
+section.main .content .markdown td,
+section.main .content .markdown th {
+  padding: 1rem 1rem;
+  border: 1px solid #e5e5e5;
+}
+section.main .content .markdown tbody tr:nth-child(odd) td,
+section.main .content .markdown tbody tr:nth-child(odd) th {
+  background-color: #f7f7f7;
+}

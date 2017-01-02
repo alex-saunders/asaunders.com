@@ -1,0 +1,35 @@
+baseurl = "https://alex-saunders.github.io/portfolio/"
+theme = "cocoa-eh"
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "Alex Saunders"
+title = "Alex Saunders"
+pygmentsuseclasses = true
+disqusshortname = "asaunders"
+pluralizelisttitles = false
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[permalinks]
+fixed = ":title/"
+blog = "blog/:slug/"
+
+[params]
+author = "Alex Saunders"
+cachebuster = true
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Example blog"
+logofile = "img/logo.png"
+faviconfile = "img/favicon.ico"
+highlightjs = true
+lang = "en"
+github = "https://github.com/example"
+linkedin = "example"
+twitter = "@alexjrsaunders"

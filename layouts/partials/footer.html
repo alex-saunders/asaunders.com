@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="container">
+    Powered by <a href="https://gohugo.io/">Hugo</a> | Markdown styles taken with ❤️ from <a href="http://themes.gohugo.io/cocoa/">cocoa theme</a>
+    <br />
+    <span class="copyright">2016-2016 Alex Saunders &copy;</span>
+    <div class="icons">
+      {{ if .Site.Params.github }}
+          <a href="{{ .Site.Params.github }}" target="_blank">
+              <i class="icon ion-social-github"></i>
+          </a>
+      {{ end }}
+
+      {{ if .Site.Params.twitter }}
+          <a href="{{ .Site.Params.twitter }}" target="_blank">
+              <i class="icon ion-social-twitter"></i>
+          </a>
+      {{ end }}
+
+      {{ if .Site.Params.linkedin }}
+          <a href="{{ .Site.Params.linkedin }}" target="_blank">
+              <i class="icon ion-social-linkedin"></i>
+          </a>
+      {{ end }}
+
+      {{ if .Site.Params.email }}
+          <a href="mailto:{{ .Site.Params.email }}">
+              <i class="icon ion-ios-email larger"></i>
+          </a>
+      {{ end }}
+
+      {{ if .Site.RSSLink }}
+          <a href="{{ .Site.RSSLink }}" class="rss">
+              <i class="icon ion-social-rss larger"></i>
+          </a>
+      {{ end }}
+    </div>
+  </div>
+</footer>
+
+{{ partial "footer_scripts" . }}
+
+</body>
+</html>
