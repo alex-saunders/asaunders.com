@@ -1,4 +1,4 @@
-baseurl = "https://alex-saunders.github.io/"
+baseurl = "https://alex-saunders.github.io/portfolio"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
@@ -7,17 +7,13 @@ layoutdir = "layouts"
 publishdir = "docs"
 author = "Alex Saunders"
 title = "Alex Saunders"
-pygmentsuseclasses = true
 disqusshortname = "asaunders"
+pygmentsuseclasses = true
 pluralizelisttitles = false
 
 [taxonomies]
 tag = "tags"
 category = "categories"
-
-[permalinks]
-fixed = ":title/"
-blog = "blog/:slug/"
 
 [params]
 author = "Alex Saunders"
@@ -29,6 +25,6 @@ logofile = "img/logo.png"
 faviconfile = "img/favicon.ico"
 highlightjs = true
 lang = "en"
-github = "https://github.com/example"
-linkedin = "example"
-twitter = "@alexjrsaunders"
+github = "https://github.com/alex-saunders"
+linkedin = "https://uk.linkedin.com/in/alexjrsaunders"
+twitter = "https://twitter.com/AlexJRsaunders"
