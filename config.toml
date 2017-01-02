@@ -1,5 +1,4 @@
-baseurl = "https://alex-saunders.github.io/portfolio/"
-theme = "cocoa-eh"
+baseurl = "https://alex-saunders.github.io/"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
