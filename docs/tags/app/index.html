@@ -203,7 +203,7 @@
   <div class="container">
     Powered by <a href="https://gohugo.io/">Hugo</a> | Markdown styles taken with ❤️ from <a href="http://themes.gohugo.io/cocoa/">cocoa theme</a>
     <br />
-    <span class="copyright">2016-2016 Alex Saunders &copy;</span>
+    <span class="copyright">&copy; Copyright 2017 Alex Saunders</span>
     <div class="icons">
       
           <a href="https://github.com/alex-saunders" target="_blank">

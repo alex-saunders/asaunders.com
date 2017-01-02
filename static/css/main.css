@@ -23,9 +23,14 @@ body {
   font-weight: 350;
   font-size: 16px; }
 
-body.no-scroll {
-  height: 100%;
+html.no-scroll {
   overflow: hidden; }
+  html.no-scroll body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px; }
 
 body * {
   box-sizing: border-box; }
@@ -247,7 +252,8 @@ a {
     position: relative;
     width: 100%;
     text-align: center;
-    line-height: 1.8; }
+    line-height: 1.8;
+    color: #8f8f8f; }
     .footer .container .icons a {
       display: inline-block;
       text-decoration: none;

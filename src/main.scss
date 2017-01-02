@@ -34,9 +34,15 @@ body {
   font-weight: 350;
   font-size: 16px;
 }
-body.no-scroll {
-  height: 100%;
+html.no-scroll {
   overflow: hidden;
+  body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  }
 }
 body * {
   box-sizing: border-box;
@@ -302,6 +308,7 @@ a {
     width: 100%;
     text-align: center;
     line-height: 1.8;
+    color: $accent-1;
 
     .icons a {
       display: inline-block;

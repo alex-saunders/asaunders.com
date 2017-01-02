@@ -10,7 +10,7 @@ dim.onclick = function(e) {
 }
 
 function openDrawer() {
-  document.body.classList.add('no-scroll');
+  document.documentElement.classList.add('no-scroll');
 
   dim.style.display = 'block';
   dim.style.opacity = 0;
@@ -39,7 +39,7 @@ function openDrawer() {
     function() {
       drawer.style.display = 'block';
       dim.style.display = 'block';
-      document.body.classList.add('no-scroll');
+      document.documentElement.classList.add('no-scroll');
     });
 }
 
@@ -66,6 +66,6 @@ function closeDrawer() {
     function() {
       drawer.style.display = 'none';
       dim.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
     });
 }
