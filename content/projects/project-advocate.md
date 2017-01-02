@@ -2,7 +2,7 @@
 date = "2016-12-30T20:29:37-07:00"
 draft = false
 title = "Project Advocate"
-tags = [ "React.js", "material-ui", "App", "Hybrid" ]
+tags = [ "Reactjs", "material-ui", "App", "Hybrid" ]
 categories = [ "project" ]
 github = "https://github.com/alex-saunders/project-advocate"
 +++
