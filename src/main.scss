@@ -138,6 +138,7 @@ a {
   background: #FFFFFF;
   width: 100%;
   z-index: 99999;
+
   @media #{$mobile} {
     height: 60px;
     padding: 0px;
@@ -150,7 +151,7 @@ a {
   .site-nav-container {
     position: relative;
     height: 100%;
-    border-bottom: 1px solid $accent-3;
+    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.117647); 
 
     .logo-container {
       padding: 10px;
@@ -297,7 +298,7 @@ a {
 
 .footer {
   position: relative;
-  background: $accent-2;
+  background: #393939;
   bottom: 0px;
   width: 100%;
   padding: 20px;
