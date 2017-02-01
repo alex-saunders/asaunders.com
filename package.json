@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "grunt watch",
     "create": "hugo server",
-    "build": "hugo"
+    "build": "hugo ; firebase deploy"
   },
   "author": "Alex Saunders",
   "license": "ISC",
