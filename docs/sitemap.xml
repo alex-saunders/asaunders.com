@@ -2,75 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/projects/project-advocate/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
+    <loc>https://asaunders.com/blog/tom/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/fixed/about/</loc>
-    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
+    <loc>https://asaunders.com/projects/tom/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/</loc>
-    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
+    <loc>https://asaunders.com/blog/post/</loc>
+    <lastmod>2017-01-31T23:59:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/categories/about/</loc>
-    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
+    <loc>https://asaunders.com/projects/test/</loc>
+    <lastmod>2017-01-31T20:50:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projects/hackathon-2017/</loc>
+    <lastmod>2017-01-31T20:45:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projects/project-advocate/</loc>
+    <lastmod>2017-01-31T19:23:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/tags/app/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
+    <loc>https://asaunders.com/blog/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://alex-saunders.github.io/portfolio/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/fixed/</loc>
-    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/tags/hybrid/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/tags/material-ui/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/categories/project/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/projects/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/tags/reactjs/</loc>
-    <lastmod>2016-12-30T20:29:37-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alex-saunders.github.io/portfolio/tags/</loc>
+    <loc>https://asaunders.com/projects/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   

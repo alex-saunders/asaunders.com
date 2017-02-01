@@ -1,4 +1,5 @@
-baseurl = "https://alex-saunders.github.io/portfolio"
+baseurl = "https://asaunders.com/"
+theme = "material"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
@@ -8,23 +9,16 @@ publishdir = "docs"
 author = "Alex Saunders"
 title = "Alex Saunders"
 disqusshortname = "asaunders"
-pygmentsuseclasses = true
 pluralizelisttitles = false
 
-[taxonomies]
-tag = "tags"
-category = "categories"
-
 [params]
-author = "Alex Saunders"
-cachebuster = true
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Example blog"
-logofile = "img/logo.png"
-faviconfile = "img/favicon.ico"
+description = "Alex Saunders' personal site"
+faviconfile = "favicon.ico"
 highlightjs = true
 lang = "en"
-github = "https://github.com/alex-saunders"
-linkedin = "https://uk.linkedin.com/in/alexjrsaunders"
-twitter = "https://twitter.com/AlexJRsaunders"
+github = "example"
+email = "you@example.com"
+linkedin = "john-example-aa80ue8è"
+twitter = "@example"

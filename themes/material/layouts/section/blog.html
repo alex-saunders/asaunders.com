@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body class="mdl-color--grey-100">
+    <!-- Social Media Bar -->
+    <div class="mdl-color--orange-700 mdl-color-text--grey-100 page-header page-header__social-media">
+      {{ partial "social_media_bar.html" . }}
+    </div> <!-- /.Social Media Bar -->
+
+    <!-- Navigation Header -->
+    <header class="mdl-color--white mdl-color-text--grey-800 page-header page-header__site-nav mdl-shadow--2dp">
+       <div class="mdl-layout__header-row">
+          <!-- Site links -->
+          <nav class="mdl-navigation">
+             <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}">Home</a>
+             <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}/projects/">Projects</a>
+             <a class="mdl-navigation__link mdl-color-text--orange" href="{{ .Site.BaseURL }}/blog/">Blog</a>
+          </nav>
+       </div>
+    </header> <!-- /.Navigation Header -->
+
+    <!-- Fixed Well -->
+    <div class="fixed-block mdl-color--orange-500">
+       <div class="page-title">
+          <div class="mdl-typography--display-3 mdl-color-text--white page-title--main">
+            Blog
+          </div>
+          <div class="mdl-typography--title mdl-color-text--white page-title--sub">
+            Category : All
+          </div>
+       </div>
+    </div> <!-- /.Fixed Well -->
+
+    <!-- Content container -->
+    <main class="content-wrapper--multi">
+      <!-- Grid container -->
+      <div class="grid-container">
+         <div class="mdl-grid">
+
+          {{ range (.Paginator 2).Pages.ByPublishDate }}
+                 {{ partial "blog_li.html" . }}
+          {{ end }}
+
+         </div>
+
+      </div> <!-- /.Grid Container -->
+
+      <!-- Paginator -->
+        {{ partial "paginator.html" . }}
+      <!-- /.Paginator -->
+
+    </main> <!-- /.Content Container -->
+
+    <!-- Footer -->
+    <footer class="mdl-mini-footer">
+      <div class="footer--border mdl-color--orange-700"></div>
+        {{ partial "footer_content.html" }}
+    </footer> <!-- /.Footer -->
+
+    <script src="{{ .Site.BaseURL }}js/material.min.js"></script>
+  </body>
+</html>

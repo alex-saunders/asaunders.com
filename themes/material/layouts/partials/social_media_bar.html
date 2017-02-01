@@ -1,0 +1,24 @@
+<div class="mdl-layout__header-row">
+   <!-- Add spacer, to align navigation to the right -->
+   <div class="mdl-layout-spacer"></div>
+   <!-- Social Media Links -->
+   <nav class="social-media__icons-container">
+     {{ if .Site.Params.github }}
+        <button class="mdl-button mdl-js-button mdl-button--icon social-media__header-icon">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </button>
+      {{ end }}
+
+      {{ if .Site.Params.linkedin }}
+        <button class="mdl-button mdl-js-button mdl-button--icon social-media__header-icon">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </button>
+      {{ end }}
+
+      {{ if .Site.RSSLink }}
+        <button class="mdl-button mdl-js-button mdl-button--icon social-media__header-icon">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </button>
+      {{ end }}
+   </nav>
+</div>

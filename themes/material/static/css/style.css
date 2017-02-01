@@ -1,0 +1,208 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; }
+
+body * {
+  box-sizing: border-box; }
+
+.page-header {
+  position: relative; }
+  .page-header .header-icon {
+    font-size: 100%;
+    line-height: 40px; }
+
+.page-header__social-media {
+  z-index: 2;
+  overflow: hidden;
+  height: 40px; }
+  .page-header__social-media .social-media__icons-container {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    height: 40px; }
+    .page-header__social-media .social-media__icons-container .social-media__header-icon {
+      font-size: 100%;
+      height: 100%;
+      line-height: 40px; }
+
+.page-header__site-nav {
+  z-index: 1; }
+  @media screen and (max-width: 479px) {
+    .page-header__site-nav .mdl-layout__header-row {
+      padding: 16px; } }
+
+.fixed-block {
+  position: relative;
+  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Desktop */ }
+  @media screen and (min-width: 840px) {
+    .fixed-block {
+      padding: 40px 40px 120px 40px; } }
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    .fixed-block {
+      padding: 20px 20px 100px 20px; } }
+  @media screen and (max-width: 479px) {
+    .fixed-block {
+      padding: 0px 16px 20px 16px; } }
+  .fixed-block .page-title {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 16px 0px;
+    height: auto;
+    /* Desktop */ }
+    @media screen and (min-width: 840px) {
+      .fixed-block .page-title {
+        width: 808px; } }
+    @media screen and (min-width: 480px) and (max-width: 839px) {
+      .fixed-block .page-title {
+        width: 90%; } }
+    @media screen and (max-width: 479px) {
+      .fixed-block .page-title {
+        width: 100%; } }
+    .fixed-block .page-title .page-title--main {
+      font-weight: 100; }
+    .fixed-block .page-title .page-title--sub {
+      font-weight: 400; }
+
+.content-wrapper--multi {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  @media screen and (min-width: 840px) {
+    .content-wrapper--multi {
+      width: 840px;
+      top: -100px; } }
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    .content-wrapper--multi {
+      width: 90%;
+      top: -100px; } }
+  @media screen and (max-width: 479px) {
+    .content-wrapper--multi {
+      width: 100%;
+      top: 0px; } }
+  .content-wrapper--multi .mdl-cell {
+    height: 400px; }
+    .content-wrapper--multi .mdl-cell .mdl-card {
+      height: 100%;
+      width: 100%; }
+      .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__media {
+        position: relative;
+        height: 300px;
+        background-size: cover; }
+        .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__media .mdl-card__share-button {
+          float: right;
+          margin: 10px 10px 0px;
+          clear: both; }
+        .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__media .mdl-card__title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 10px; }
+          .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__media .mdl-card__title .mdl-card__title-text {
+            position: relative;
+            font-size: 250%;
+            color: #fafafa; }
+          .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__media .mdl-card__title .mdl-card__title-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8; }
+      .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__supporting-text {
+        width: 100%;
+        overflow: visible;
+        padding-bottom: 0px; }
+        .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__supporting-text .mdl-card__date-text {
+          float: right;
+          font-size: 100%;
+          margin: 0px 0px 10px 0px;
+          line-height: 16px; }
+        .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__supporting-text .mdl-card__main-text {
+          clear: both;
+          line-height: 22px;
+          overflow: hidden;
+          margin: 0px;
+          height: 66px; }
+      .content-wrapper--multi .mdl-cell .mdl-card .mdl-card__actions .mdl-card__read-more-container {
+        width: 100%;
+        margin-top: 8px; }
+  .content-wrapper--multi .pagination-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    padding: 16px; }
+    .content-wrapper--multi .pagination-container .pagination-prev {
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
+      .content-wrapper--multi .pagination-container .pagination-prev span {
+        padding-left: 10px; }
+    .content-wrapper--multi .pagination-container .pagination-next {
+      margin-left: auto; }
+      .content-wrapper--multi .pagination-container .pagination-next span {
+        padding-right: 10px; }
+    .content-wrapper--multi .pagination-container a {
+      text-decoration: none;
+      font-weight: bold; }
+
+.content-wrapper--single {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  @media screen and (min-width: 840px) {
+    .content-wrapper--single {
+      width: 840px;
+      top: -100px; } }
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    .content-wrapper--single {
+      width: 90%;
+      top: -100px; } }
+  @media screen and (max-width: 479px) {
+    .content-wrapper--single {
+      width: 100%;
+      top: 0px; } }
+  .content-wrapper--single .content-container {
+    background: #fff; }
+    .content-wrapper--single .content-container .markdown .content {
+      padding: 16px; }
+      .content-wrapper--single .content-container .markdown .content p {
+        margin-bottom: 1em; }
+      .content-wrapper--single .content-container .markdown .content img {
+        max-width: 100%; }
+    .content-wrapper--single .content-container .markdown .markdown-footer {
+      padding: 0px 16px 16px 16px; }
+      .content-wrapper--single .content-container .markdown .markdown-footer .markdown-footer--tags {
+        width: 60%;
+        float: left; }
+      .content-wrapper--single .content-container .markdown .markdown-footer .markdown-footer--share {
+        width: 40%;
+        float: right; }
+        .content-wrapper--single .content-container .markdown .markdown-footer .markdown-footer--share a {
+          float: left;
+          margin-right: 10px;
+          font-size: 175%; }
+
+/* Footer */
+.mdl-mini-footer {
+  position: relative; }
+  .mdl-mini-footer .footer--border {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 5px; }
