@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "http://asaunders.com/"
 theme = "material"
 builddrafts = false
 canonifyurls = true
