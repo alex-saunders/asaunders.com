@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://asaunders.com/blog/tom/</loc>
+    <loc>/blog/tom/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/projects/tom/</loc>
+    <loc>/projects/tom/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/blog/post/</loc>
+    <loc>/blog/post/</loc>
     <lastmod>2017-01-31T23:59:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/projects/test/</loc>
+    <loc>/projects/test/</loc>
     <lastmod>2017-01-31T20:50:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/projects/hackathon-2017/</loc>
+    <loc>/projects/hackathon-2017/</loc>
     <lastmod>2017-01-31T20:45:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/projects/project-advocate/</loc>
+    <loc>/projects/project-advocate/</loc>
     <lastmod>2017-01-31T19:23:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://asaunders.com/</loc>
+    <loc>/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://asaunders.com/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://asaunders.com/projects/</loc>
+    <loc>/projects/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
