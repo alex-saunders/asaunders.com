@@ -1,4 +1,4 @@
-baseurl = "http://asaunders.com/"
+baseurl = "https://asaunders.com/"
 theme = "material"
 builddrafts = false
 canonifyurls = true
@@ -22,3 +22,7 @@ github = "example"
 email = "you@example.com"
 linkedin = "john-example-aa80ue8è"
 twitter = "@example"
+
+[taxonomies]
+project-tag = "projectTags"
+blog-tag = "blogTags"

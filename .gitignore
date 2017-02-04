@@ -1,3 +1,4 @@
 node_modules/
-themes/cocoa-eh/
 .firebaserc
+database.rules.json
+firebase.json

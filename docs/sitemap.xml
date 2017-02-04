@@ -2,51 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://asaunders.com/blog/tom/</loc>
+    <loc>https://asaunders.com/blog/tom/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/projects/tom/</loc>
+    <loc>https://asaunders.com/projects/tom/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/blog/post/</loc>
+    <loc>https://asaunders.com/blog/post/</loc>
     <lastmod>2017-01-31T23:59:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/projects/test/</loc>
+    <loc>https://asaunders.com/projects/test/</loc>
     <lastmod>2017-01-31T20:50:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/projects/hackathon-2017/</loc>
+    <loc>https://asaunders.com/projects/hackathon-2017/</loc>
     <lastmod>2017-01-31T20:45:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/projects/project-advocate/</loc>
+    <loc>https://asaunders.com/projects/project-advocate/</loc>
     <lastmod>2017-01-31T19:23:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://asaunders.com/</loc>
+    <loc>https://asaunders.com/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://asaunders.com/blog/</loc>
+    <loc>https://asaunders.com/blogtags/blog/</loc>
+    <lastmod>2017-01-31T23:59:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/blog/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/blogtags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/material-ui/</loc>
+    <lastmod>2017-01-31T19:23:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/mdl/</loc>
+    <lastmod>2017-01-31T20:45:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/polymer/</loc>
+    <lastmod>2017-01-31T20:45:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projects/</loc>
+    <lastmod>2017-02-01T13:48:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/reactjs/</loc>
+    <lastmod>2017-01-31T19:23:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/some/</loc>
+    <lastmod>2017-01-31T20:50:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/tags/</loc>
+    <lastmod>2017-01-31T20:50:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/test/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://asaunders.com/projects/</loc>
+    <loc>https://asaunders.com/blogtags/test/</loc>
+    <lastmod>2017-01-31T23:59:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/tom/</loc>
     <lastmod>2017-02-01T13:48:28+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/projecttags/</loc>
   </url>
   
 </urlset>

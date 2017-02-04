@@ -5,7 +5,7 @@
 
   <body class="mdl-color--grey-100">
     <!-- Social Media Bar -->
-    <div class="mdl-color--orange-700 mdl-color-text--grey-100 page-header page-header__social-media">
+    <div class="mdl-color--white mdl-color-text--grey-100 page-header page-header__social-media">
       {{ partial "social_media_bar.html" . }}
     </div> <!-- /.Social Media Bar -->
 
@@ -15,14 +15,14 @@
           <!-- Site links -->
           <nav class="mdl-navigation">
              <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}">Home</a>
-             <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}/projects/">Projects</a>
-             <a class="mdl-navigation__link mdl-color-text--orange" href="{{ .Site.BaseURL }}/blog/">Blog</a>
+             <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}projects/">Projects</a>
+             <a class="mdl-navigation__link mdl-color-text--{{ .Params.color }}" href="{{ .Site.BaseURL }}blog/">Blog</a>
           </nav>
        </div>
     </header> <!-- /.Navigation Header -->
 
-    <!-- Fixed Well -->
-    <div class="fixed-block mdl-color--orange-500">
+    <!-- Masthead -->
+    <div class="masthead mdl-color--{{ .Params.color }}-500">
        <div class="page-title">
           <div class="mdl-typography--display-3 mdl-color-text--white page-title--main">
             Blog
@@ -31,7 +31,13 @@
             Category : All
           </div>
        </div>
-    </div> <!-- /.Fixed Well -->
+       <!-- <div class="masthead--accent mdl-color--{{ .Params.color }}-700"></div> -->
+       <div class="masthead--accent">
+        <svg viewBox="0 0 100 100" width='100%' height='100%' preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0 100, 0 60, 100 0, 100 100" style="stroke:none" class="mdl-color-svg--{{ .Params.color }}-700"/>
+        </svg>
+      </div>
+    </div> <!-- /.Masthead -->
 
     <!-- Content container -->
     <main class="content-wrapper--multi">
@@ -39,8 +45,11 @@
       <div class="grid-container">
          <div class="mdl-grid">
 
+           {{ $color := .Params.color }}
+
           {{ range (.Paginator 2).Pages.ByPublishDate }}
-                 {{ partial "blog_li.html" . }}
+            {{ .Scratch.Add "color" $color }}
+            {{ partial "post_li.html" . }}
           {{ end }}
 
          </div>
@@ -54,10 +63,7 @@
     </main> <!-- /.Content Container -->
 
     <!-- Footer -->
-    <footer class="mdl-mini-footer">
-      <div class="footer--border mdl-color--orange-700"></div>
-        {{ partial "footer_content.html" }}
-    </footer> <!-- /.Footer -->
+    {{ partial "footer.html" . }}<!-- /.Footer -->
 
     <script src="{{ .Site.BaseURL }}js/material.min.js"></script>
   </body>

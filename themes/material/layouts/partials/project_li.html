@@ -25,7 +25,7 @@
       </div>
       <div class="mdl-card__actions">
         {{ range .Params.projectTags }}
-          <a href="{{ "/project-tags/" | relLangURL }}{{ . | urlize }}" class="mdl-chip mdl-color--grey-200">
+          <a href="{{ "/projectTags/" | relLangURL }}{{ . | urlize }}" class="mdl-chip mdl-color--grey-200">
           <span class="mdl-chip__text">{{ . }}</span>
           </a>
         {{ end }}

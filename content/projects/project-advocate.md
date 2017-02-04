@@ -6,10 +6,11 @@ projectTags = [
   "ReactJS",
   "material-ui"
 ]
-desktopWidth = 6
+color = "deep-orange"
+desktopWidth = 12
 mobileWidth = 8
-thumbnail = "projects/project-advocate/thumbnail.png"
-coverPhoto = "projects/project-advocate/cover.png"
+thumbnail = "/img/projects/project-advocate/thumbnail.png"
+coverPhoto = "/img/projects/project-advocate/cover.png"
 +++
 ![cover photo](img/projects/project-advocate/thumbnail.png)
 

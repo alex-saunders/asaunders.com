@@ -6,10 +6,11 @@ projectTags = [
   "Tom",
   "test"
 ]
-desktopWidth = 6
+color = "deep-orange"
+desktopWidth = 12
 mobileWidth = 8
-thumbnail = "projects/hackathon-2017/.png"
-coverPhoto = "projects/hackathon-2017/.png"
+thumbnail = "//placehold.it/800"
+coverPhoto = "//placehold.it/800"
 +++
 
 # This is a huge header #

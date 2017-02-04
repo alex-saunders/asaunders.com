@@ -1,0 +1,39 @@
+.markdown {
+  .content {
+    padding: 16px;
+    color: #555;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #333;
+    }
+    pre {
+
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    img {
+        max-width: 100%;
+    }
+  }
+
+
+  .markdown-footer {
+    padding: 0px 16px 16px 16px;
+
+    .markdown-footer--tags {
+      width: 60%;
+      float: left;
+    }
+    .markdown-footer--share {
+      width: 40%;
+      float: right;
+
+      a {
+        float: left;
+        margin-right: 10px;
+        font-size: 175%;
+      }
+    }
+  }
+}

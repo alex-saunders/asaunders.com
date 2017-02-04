@@ -29,6 +29,7 @@ body * {
   .social-media__icons-container {
     position: absolute;
     right: 40px;
+    @media #{$mobile} { right: 20px; }
     top: 0px;
     height: 40px;
 
@@ -36,6 +37,8 @@ body * {
       font-size: 100%;
       height: 100%;
       line-height: 40px;
+      margin-left: 10px;
+      text-decoration: none;
     }
   }
 }
@@ -47,8 +50,9 @@ body * {
   }
 }
 
-.fixed-block {
+.masthead {
   position: relative;
+  overflow: hidden;
   height: auto;
   top: 0;
   left: 0;
@@ -92,6 +96,14 @@ body * {
     }
   }
 
+  /* Hacky way of doing diagonal/skewed header stripe */
+  .masthead--accent {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 30px
+  }
 }
 
 .content-wrapper--multi {
@@ -233,43 +245,6 @@ body * {
   .content-container {
     background: #fff;
 
-    .markdown {
-      .content {
-        padding: 16px;
-
-        h1, h2, h3, h4, h5, h6 {
-        }
-        pre {
-          
-        }
-        p {
-          margin-bottom: 1em;
-        }
-        img {
-            max-width: 100%;
-        }
-      }
-
-
-      .markdown-footer {
-        padding: 0px 16px 16px 16px;
-
-        .markdown-footer--tags {
-          width: 60%;
-          float: left;
-        }
-        .markdown-footer--share {
-          width: 40%;
-          float: right;
-
-          a {
-            float: left;
-            margin-right: 10px;
-            font-size: 175%;
-          }
-        }
-      }
-    }
   }
 }
 

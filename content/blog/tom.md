@@ -8,8 +8,9 @@ projectTags = [
 ]
 desktopWidth = 12
 mobileWidth = 8
-thumbnail = "projects/hackathon-2017/.png"
-coverPhoto = "projects/hackathon-2017/.png"
+thumbnail = "//placehold.it/800"
+coverPhoto = "//placehold.it/800"
+color = "blue-grey"
 +++
 
 # heading
