@@ -4,6 +4,8 @@
 
 My personal site made using the [Hugo static site generator](https://gohugo.io/), with a custom theme created by myself with the [MDL library](https://getmdl.io/index.html).
 
+The 'docs' folder contains a prebuilt version of the site with an index.html file you can use to run the site locally, without needing to set up the dev or content editing environment.
+
 If you want to develop/create some content (I imagine you must be pretty lost for things to do, to be honest this is mainly for personal reference) then follow these instructions:
 
 ### Dev environment
