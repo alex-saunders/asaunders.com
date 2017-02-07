@@ -21,6 +21,6 @@ If you want to develop/create some content (I imagine you must be pretty lost fo
 4. Add markdown content within the 'content' folder
 
 ### Build
-Build's the site content into the 'docs' folder and deploys to firebase (you'll have to ensure `firebase init` has been called on the project first)
+Build's the site content into the 'public' folder and deploys to firebase (you'll have to ensure `firebase init` has been called on the project first)
 
 1. `npm run build`
