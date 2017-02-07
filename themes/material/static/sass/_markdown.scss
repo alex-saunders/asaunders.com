@@ -12,8 +12,40 @@
     p {
       margin-bottom: 1em;
     }
+    figure {
+      margin: 0px;
+      display: inline-block;
+      position: relative;
+      float: left;
+    }
+    .padding-right--16 {
+      padding-right: 16px;
+    }
+    .padding--mobile-0 {
+      @media #{$mobile} { padding: 0px }
+    }
     img {
-        max-width: 100%;
+      float: left;
+      max-width: 100%;
+      padding-bottom: 16px;
+    }
+    .img--200 {
+       width: 200px;
+    }
+    .img--mob-100 {
+      @media #{$mobile} { width: 100%; }
+      img {
+        width: 100%;
+      }
+    }
+    .img--tablet-100 {
+      @media #{$tablet} { width: 100%; }
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 
@@ -34,6 +66,28 @@
         margin-right: 10px;
         font-size: 175%;
       }
+    }
+  }
+}
+
+.markdown.index {
+  .content {
+    a {
+      color: rgb(76,175,80);
+    }
+  }
+}
+.markdown.projects {
+  .content {
+    a {
+      color: rgb(255,152,0);
+    }
+  }
+}
+.markdown.blog {
+  .content {
+    a {
+      color: rgb(33,150,243);
     }
   }
 }

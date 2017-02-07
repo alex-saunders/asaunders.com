@@ -1,16 +1,13 @@
 +++
-date = "2017-01-31T20:45:34Z"
-title = "SD Hackathon 2017"
-draft = false
-projectTags = [
-  "Polymer",
-  "MDL"
-]
-desktopWidth = 12
+title = "SD x IBM Hackathon 2017"
+projectTags = ["",""]
 mobileWidth = 8
-thumbnail = "/img/projects/hackathon-2017/thumbnail.png"
-coverPhoto = "/img/projects/hackathon-2017/cover.png"
-color = "deep-orange"
+desktopWidth = 12
+color = "orange"
+coverPhoto = "/img/projects/hackathon-2017/thumbnail.jpg"
+thumbnail = "/img/projects/hackathon-2017/thumbnail.jpg"
+date = "2017-02-06T22:54:49Z"
+
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

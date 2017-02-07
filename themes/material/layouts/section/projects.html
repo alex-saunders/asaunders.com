@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
-  {{ partial "head.html" . }}
+  {{ partial "common/head.html" . }}
 
   <body class="mdl-color--grey-100">
     <!-- Social Media Bar -->
     <div class="mdl-color--white mdl-color-text--grey-100 page-header page-header__social-media">
-      {{ partial "social_media_bar.html" . }}
+      {{ partial "common/social_media_bar.html" . }}
     </div> <!-- /.Social Media Bar -->
 
     <!-- Navigation Header -->
@@ -31,8 +31,6 @@
             Category : All
           </div>
        </div>
-       <!-- <div class="masthead--accent mdl-color--{{ .Params.color }}-700"></div> -->
-
        <div class="masthead--accent">
         <svg viewBox="0 0 100 100" width='100%' height='100%' preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <polygon points="0 100, 0 60, 100 0, 100 100" style="stroke:none" class="mdl-color-svg--{{ .Params.color }}-700"/>
@@ -47,7 +45,7 @@
          <div class="mdl-grid">
 
           {{ range (.Paginator 4).Pages.ByPublishDate }}
-            {{ partial "post_li.html" . }}
+            {{ partial "project/project_li.html" . }}
           {{ end }}
 
          </div>
@@ -55,13 +53,13 @@
       </div> <!-- /.Grid Container -->
 
       <!-- Paginator -->
-        {{ partial "paginator.html" . }}
+        {{ partial "project/project_paginator.html" . }}
       <!-- /.Paginator -->
 
     </main> <!-- /.Content Container -->
 
     <!-- Footer -->
-    {{ partial "footer.html" . }}<!-- /.Footer -->
+    {{ partial "common/footer.html" . }}<!-- /.Footer -->
 
     <script src="{{ .Site.BaseURL }}js/material.min.js"></script>
   </body>

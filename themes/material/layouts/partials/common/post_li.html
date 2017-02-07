@@ -1,0 +1,47 @@
+<div class="mdl-cell mdl-cell--{{ .Params.desktopWidth }}-col mdl-cell--{{ .Params.mobileWidth }}-col-tablet mdl-cell--top">
+   <div class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__media mdl-color--grey-200" style="background-image: url('{{ .Params.thumbnail }}')" >
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}" class="mdl-button mdl-js-button mdl-button--fab mdl-card__link mdl-button--colored mdl-color--orange">
+           <i class="material-icons">&#xE5C8;</i>
+         </a>
+       {{ end }}
+      </div>
+      <div class="mdl-card__supporting-text">
+        <h4 class="mdl-typography--display-1 mdl-color-text--grey-800">
+          {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}" class="mdl-color-text--grey-800 mdl-card__post-title">
+          {{ end}}
+          {{ .Title }}
+          {{ if .Truncated }}
+            </a>
+          {{end}}
+        </h4>
+
+         <p class="mdl-card__main-text mdl-color-text--grey-700">
+            {{ .Summary }}
+         </p>
+
+         <p class="mdl-color-text--grey-500 mdl-card__detail">
+              {{ .Site.Params.author }} &middot;
+              {{ .Date.Format .Site.Params.dateform }} &middot;
+
+              {{ with .Params.blogTags }}
+                Tagged in:
+                {{ $sort := sort . }}
+                {{ $links := apply $sort "partial" "blog/blog_tag_link"  "." }}
+                {{ $clean := apply $links "chomp" "." }}
+                {{ delimit $clean ", " }}
+              {{ end }}
+
+              {{ with .Params.projectTags }}
+                Tagged in:
+                {{ $sort := sort . }}
+                {{ $links := apply $sort "partial" "project/project_tag_link"  "." }}
+                {{ $clean := apply $links "chomp" "." }}
+                {{ delimit $clean ", " }}
+              {{ end }}
+         </p>
+      </div>
+   </div>
+</div>

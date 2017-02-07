@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
-  {{ partial "head.html" . }}
+  {{ partial "common/head.html" . }}
 
   <body class="mdl-color--grey-100">
     <!-- Social Media Bar -->
     <div class="mdl-color--white mdl-color-text--grey-100 page-header page-header__social-media">
-      {{ partial "social_media_bar.html" . }}
+      {{ partial "common/social_media_bar.html" . }}
     </div> <!-- /.Social Media Bar -->
 
     <!-- Navigation Header -->
@@ -15,17 +15,17 @@
           <!-- Site links -->
           <nav class="mdl-navigation">
              <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}">Home</a>
-             <a class="mdl-navigation__link mdl-color-text--green" href="{{ .Site.BaseURL }}projects/">Projects</a>
+             <a class="mdl-navigation__link mdl-color-text--orange" href="{{ .Site.BaseURL }}projects/">Projects</a>
              <a class="mdl-navigation__link mdl-color-text--grey-900" href="{{ .Site.BaseURL }}blog/">Blog</a>
           </nav>
        </div>
     </header> <!-- /.Navigation Header -->
 
     <!-- Masthead -->
-    <div class="masthead mdl-color--green-500">
+    <div class="masthead mdl-color--orange-500">
        <div class="page-title">
           <div class="mdl-typography--display-3 mdl-color-text--white page-title--main">
-            Projects 
+            Projects
           </div>
           <div class="mdl-typography--title mdl-color-text--white page-title--sub">
             Category : {{ .Title }}
@@ -36,7 +36,7 @@
 
        <div class="masthead--accent">
         <svg viewBox="0 0 100 100" width='100%' height='100%' preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0 100, 0 60, 100 0, 100 100" style="stroke:none" class="mdl-color-svg--{{ .Params.color }}-700"/>
+            <polygon points="0 100, 0 60, 100 0, 100 100" style="stroke:none" class="mdl-color-svg--orange-700"/>
         </svg>
       </div>
     </div> <!-- /.Masthead -->
@@ -47,8 +47,8 @@
       <div class="grid-container">
          <div class="mdl-grid">
 
-          {{ range (.Paginator 2).Pages.ByPublishDate }}
-                 {{ partial "project_li.html" . }}
+          {{ range (.Paginator 4).Pages.ByPublishDate }}
+                 {{ partial "project/project_li.html" . }}
           {{ end }}
 
          </div>
@@ -56,13 +56,13 @@
       </div> <!-- /.Grid Container -->
 
       <!-- Paginator -->
-        {{ partial "paginator.html" . }}
+        {{ partial "project/project_paginator.html" . }}
       <!-- /.Paginator -->
 
     </main> <!-- /.Content Container -->
 
     <!-- Footer -->
-    {{ partial "footer.html" . }}<!-- /.Footer -->
+    {{ partial "common/footer.html" . }}<!-- /.Footer -->
 
     <script src="{{ .Site.BaseURL }}js/material.min.js"></script>
   </body>

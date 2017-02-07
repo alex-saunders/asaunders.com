@@ -6,63 +6,13 @@
     <description>Recent content in Projects on Alex Saunders</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 01 Feb 2017 13:48:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Feb 2017 22:54:49 +0000</lastBuildDate>
     <atom:link href="https://asaunders.com/projects/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Tom</title>
-      <link>https://asaunders.com/projects/tom/</link>
-      <pubDate>Wed, 01 Feb 2017 13:48:28 +0000</pubDate>
-      
-      <guid>https://asaunders.com/projects/tom/</guid>
-      <description>
-
-&lt;h1 id=&#34;this-is-a-huge-header&#34;&gt;This is a huge header&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;this is in italic&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;this is in bold&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://placeholdit.imgix.net/~text?txtsize=28&amp;amp;txt=300%C3%97300&amp;amp;w=300&amp;amp;h=300&#34; alt=&#34;alternate text&#34; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;this starts a list &lt;em&gt;with&lt;/em&gt; numbers&lt;/li&gt;
-&lt;li&gt;this will show as number &amp;ldquo;2&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;this will show as number &amp;ldquo;3.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;any number, +, -, or * will keep the list going.
-
-&lt;ul&gt;
-&lt;li&gt;just indent by 4 spaces (or tab) to make a sub-list
-
-&lt;ol&gt;
-&lt;li&gt;keep indenting for more sub lists&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;here i&amp;rsquo;m back to the second level&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Test Project</title>
-      <link>https://asaunders.com/projects/test/</link>
-      <pubDate>Tue, 31 Jan 2017 20:50:43 +0000</pubDate>
-      
-      <guid>https://asaunders.com/projects/test/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SD Hackathon 2017</title>
+      <title>SD x IBM Hackathon 2017</title>
       <link>https://asaunders.com/projects/hackathon-2017/</link>
-      <pubDate>Tue, 31 Jan 2017 20:45:34 +0000</pubDate>
+      <pubDate>Mon, 06 Feb 2017 22:54:49 +0000</pubDate>
       
       <guid>https://asaunders.com/projects/hackathon-2017/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
@@ -76,38 +26,32 @@
     </item>
     
     <item>
-      <title>Project Advocate</title>
-      <link>https://asaunders.com/projects/project-advocate/</link>
-      <pubDate>Tue, 31 Jan 2017 19:23:30 +0000</pubDate>
+      <title>Advocate</title>
+      <link>https://asaunders.com/projects/advocate/</link>
+      <pubDate>Mon, 06 Feb 2017 22:54:42 +0000</pubDate>
       
-      <guid>https://asaunders.com/projects/project-advocate/</guid>
-      <description>
+      <guid>https://asaunders.com/projects/advocate/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;img/projects/project-advocate/thumbnail.png&#34; alt=&#34;cover photo&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
-&lt;h1 id=&#34;this-is-a-huge-header&#34;&gt;this is a huge header&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
-&lt;h2 id=&#34;this-is-a-smaller-header&#34;&gt;this is a smaller header&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
-&lt;h3 id=&#34;this-is-even-smaller&#34;&gt;this is even smaller&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>asaunders.com</title>
+      <link>https://asaunders.com/projects/asaunders/</link>
+      <pubDate>Mon, 06 Feb 2017 22:54:30 +0000</pubDate>
+      
+      <guid>https://asaunders.com/projects/asaunders/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
-&lt;h4 id=&#34;more-small&#34;&gt;more small&lt;/h4&gt;
-
-&lt;h5 id=&#34;even-smaller&#34;&gt;even smaller&lt;/h5&gt;
-
-&lt;h6 id=&#34;smallest-still-h6-header&#34;&gt;smallest still: &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; header&lt;/h6&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-  &amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
-  &amp;lt;/head&amp;gt;
-  &amp;lt;body&amp;gt;
-
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
