@@ -16,9 +16,10 @@ If you want to develop/create some content (I imagine you must be pretty lost fo
 
 ### Content editing
 1. `npm install`
-2. `npm run create`
-3. Navigate to [http://localhost:1313/](http://localhost:1313/)
-4. Add markdown content within the 'content' folder
+2. `hugo new projects/*.md` OR `hugo new blog/*.md`
+3. `npm run create`
+4. Navigate to [http://localhost:1313/](http://localhost:1313/)
+5. Edit the new markdown content within the 'content' folder
 
 ### Build
 Build's the site content into the 'public' folder and deploys to firebase (you'll have to ensure `firebase init` has been called on the project first)
