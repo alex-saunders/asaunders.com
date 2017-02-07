@@ -23,7 +23,7 @@
 
     <!-- Masthead -->
     <div class="masthead mdl-color--{{ .Params.color }}-500">
-      <div class="cover-photo" {{ if .Params.coverPhoto }} style="background-image: url('{{ .Params.coverPhoto }}')" {{ end }}>
+      <div class="cover-photo" {{ if .Params.coverPhoto }} style="background-image: url('/img/compressed{{ .Params.coverPhoto }}')" {{ end }}>
       </div>
       <div class="page-title">
          <div class="mdl-typography--display-3 mdl-color-text--white page-title--main">

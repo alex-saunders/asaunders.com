@@ -4,8 +4,8 @@ projectTags = ["",""]
 mobileWidth = 8
 desktopWidth = 12
 color = "orange"
-coverPhoto = "/img/projects/hackathon-2017/thumbnail.jpg"
-thumbnail = "/img/projects/hackathon-2017/thumbnail.jpg"
+coverPhoto = "/projects/hackathon-2017/thumbnail.jpg"
+thumbnail = "/projects/hackathon-2017/thumbnail.jpg"
 date = "2017-02-06T22:54:49Z"
 
 +++

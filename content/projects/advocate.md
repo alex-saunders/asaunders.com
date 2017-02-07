@@ -5,8 +5,8 @@ projectTags = ["",""]
 mobileWidth = 8
 desktopWidth = 12
 color = "orange"
-coverPhoto = "/img/projects/advocate/cover.jpg"
-thumbnail = "/img/projects/advocate/thumbnail.png"
+coverPhoto = "/projects/advocate/cover.jpg"
+thumbnail = "/projects/advocate/thumbnail.png"
 
 +++
 

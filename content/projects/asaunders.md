@@ -1,6 +1,6 @@
 +++
-coverPhoto = "/img/projects/asaunders/cover.jpg"
-thumbnail = "/img/projects/asaunders/thumbnail.jpg"
+coverPhoto = "/projects/asaunders/cover.jpg"
+thumbnail = "/projects/asaunders/thumbnail.jpg"
 projectTags = ["",""]
 mobileWidth = 8
 date = "2017-02-06T22:54:30Z"

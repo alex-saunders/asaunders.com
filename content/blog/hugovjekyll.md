@@ -5,8 +5,8 @@ color = "blue"
 date = "2017-02-06T22:55:04Z"
 title = "Hugo v Jekyll"
 blogTags = ["",""]
-coverPhoto = "/img/blog/hugo-jekyll/cover.jpg"
-thumbnail = "/img/blog/hugo-jekyll/thumbnail.jpg"
+coverPhoto = "/blog/hugo-jekyll/cover.jpg"
+thumbnail = "/blog/hugo-jekyll/thumbnail.jpg"
 
 +++
 

@@ -3,7 +3,7 @@ color = "green"
 +++
 
 
-{{< figure src="img/me.jpg" class="img--200 img--mob-100 padding-right--16 padding--mobile-0" style="color: black">}}
+{{< figure src="img/compressed/me.jpg" class="img--200 img--mob-100 padding-right--16 padding--mobile-0" style="color: black">}}
 
 
 Welcome to my site, here you can find blog posts where I talk about what i'm working on, what technologies i'm currently playing with or anything else that comes to mind.

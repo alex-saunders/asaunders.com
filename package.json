@@ -1,14 +1,14 @@
 {
   "name": "asaunders.com",
   "version": "1.0.0",
-  "description": "personal site",
+  "description": "Personal Site",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "dev": "grunt watch",
     "create": "hugo server",
-    "build": "hugo ; firebase deploy"
+    "build": "grunt ; hugo ; firebase deploy"
   },
   "author": "Alex Saunders",
   "license": "ISC",

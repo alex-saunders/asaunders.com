@@ -23,12 +23,28 @@ module.exports = function(grunt) {
 			}
 		},
 		imagemin: {
-			dist: {
+			png: {
 				options: {
 					optimizationLevel: 7
 				},
 				files: [{
-					src: ['static/img/**/*.{png,jpg}', 'static/img/*.{png,jpg}']
+					expand: true,
+					cwd: 'static/img/src/',
+					src: ['**/*.png', '*.png'],
+					dest: 'static/img/compressed/',
+					ext: '.png'
+				}]
+			},
+			jpg: {
+				options: {
+					optimizationLevel: 7
+				},
+				files: [{
+					expand: true,
+					cwd: 'static/img/src/',
+					src: ['**/*.jpg', '*.jpg'],
+					dest: 'static/img/compressed/',
+					ext: '.jpg'
 				}]
 			}
 		},
@@ -38,7 +54,7 @@ module.exports = function(grunt) {
 				tasks: ['sass', 'autoprefixer', 'cssmin']
 			},
 			image: {
-				files: ['static/img/*.png', 'static/img/*.jpg', 'static/img/**/*.png', 'static/img/**/*.jpg'],
+				files: ['static/img/src/*.png', 'static/img/src/*.jpg', 'static/img/src/**/*.png', 'static/img/src/**/*.jpg'],
 				tasks: ['imagemin']
 			}
 		}
