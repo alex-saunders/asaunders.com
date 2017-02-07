@@ -228,16 +228,16 @@ body * {
     margin: 0px;
     display: inline-block;
     position: relative;
-    float: left; }
+    float: left;
+    margin-bottom: 16px; }
   .markdown .content .padding-right--16 {
-    padding-right: 16px; }
+    margin-right: 16px; }
   @media screen and (max-width: 479px) {
     .markdown .content .padding--mobile-0 {
       padding: 0px; } }
   .markdown .content img {
     float: left;
-    max-width: 100%;
-    padding-bottom: 16px; }
+    max-width: 100%; }
   .markdown .content .img--200 {
     width: 200px; }
   @media screen and (max-width: 479px) {

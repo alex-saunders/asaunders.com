@@ -17,9 +17,10 @@
       display: inline-block;
       position: relative;
       float: left;
+      margin-bottom: 16px;
     }
     .padding-right--16 {
-      padding-right: 16px;
+      margin-right: 16px;
     }
     .padding--mobile-0 {
       @media #{$mobile} { padding: 0px }
@@ -27,7 +28,6 @@
     img {
       float: left;
       max-width: 100%;
-      padding-bottom: 16px;
     }
     .img--200 {
        width: 200px;
