@@ -16,7 +16,7 @@ If you want to develop/create some content (I imagine you must be pretty lost fo
 
 ### Content editing
 1. `npm install`
-2. `hugo new projects/*.md` OR `hugo new blog/*.md`
+2. `hugo new projects/{projectname}.md` OR `hugo new blog/{blogpostname}.md`
 3. `npm run create`
 4. Navigate to [http://localhost:1313/](http://localhost:1313/)
 5. Edit the new markdown content within the 'content' folder
