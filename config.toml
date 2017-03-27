@@ -9,6 +9,8 @@ publishdir = "public"
 title = "Alex Saunders"
 disqusshortname = "asaunders"
 pluralizelisttitles = false
+pygmentsstyle = "murphy"
+PygmentsCodeFences = true
 
 [params]
 author = "Alex Saunders"
@@ -22,6 +24,7 @@ github = "alex-saunders"
 email = "alexjrsaunders@gmail.com"
 linkedin = "alexjrsaunders"
 twitter = "AlexJRsaunders"
+codepen = "alex-saunders"
 
 [taxonomies]
 project-tag = "projectTags"

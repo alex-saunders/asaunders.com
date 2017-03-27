@@ -1,51 +1,122 @@
 .markdown {
+  line-height: 1.5;
+
+  .summary {
+    padding: 16px 16px 0px;
+    float: right;
+
+    p {
+      line-height: 1.5;
+      font-size: 12px;
+      margin: 0px;
+      color: #777;
+    }
+  }
   .content {
     padding: 16px;
-    color: #555;
+    font-size: 16px;
+    clear: both;
 
     h1, h2, h3, h4, h5, h6 {
       color: #333;
+    }
+    h1 {
+      padding-bottom: 0.3em;
+      font-size: 2em;
+      border-bottom: 1px solid #eaecef;
+    }
+    h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.5em;
+      border-bottom: 1px solid #eaecef;
     }
     pre {
 
     }
     p {
-      margin-bottom: 1em;
+      line-height: 1.5;
+      font-size: 16px;
+      margin-bottom: 1.4em;
+      font-weight: 400;
+      color: #333;
+    }
+    p:first-child {
+      font-size: 17px;
+      color: #333;
+    }
+    strong {
+      font-weight: 800;
+    }
+    pre {
+      padding: 8px;
+      border: 1px solid rgba(1, 1, 1, 0.1);
+      background: #fafafa;
+    }
+    code {
+      background: #f9f2f4;
+      color: #c7254e;
+      font-size: 14px;
+      padding: 3px;
+      border-radius: 4px;
+    }
+    pre, code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     }
     figure {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+    .index {
       margin: 0px;
       display: inline-block;
       position: relative;
       float: left;
-      margin-bottom: 16px;
-    }
-    .padding-right--16 {
-      margin-right: 16px;
-    }
-    .padding--mobile-0 {
-      @media #{$mobile} { padding: 0px }
-    }
-    img {
-      float: left;
-      max-width: 100%;
-    }
-    .img--200 {
-       width: 200px;
-    }
-    .img--mob-100 {
-      @media #{$mobile} { width: 100%; }
-      img {
+      margin: 0px 16px 16px 0px;
+      width: 250px;
+
+      @media #{$mobile} {
         width: 100%;
       }
-    }
-    .img--tablet-100 {
-      @media #{$tablet} { width: 100%; }
+
+      img {
+        width: 100%;
+        float: left;
+      }
     }
     a {
       text-decoration: none;
+      color: #0366d6;
     }
     a:hover {
       text-decoration: underline;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      tr {
+        background-color: #fff;
+
+        th, td {
+          padding: 8px 16px;
+          border: 1px solid #dfe2e5;
+        }
+        th {
+          font-weight: 600;
+        }
+      }
+    }
+
+    hr {
+      border-width: 3px;
+      border-bottom: none;
+      border-right: none;
+      border-left: none;
+      border-color: rgba(0,0,0,0.1);
     }
   }
 

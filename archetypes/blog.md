@@ -1,4 +1,5 @@
 +++
+summary = ""
 color = "blue"
 desktopWidth = 12
 mobileWidth = 8

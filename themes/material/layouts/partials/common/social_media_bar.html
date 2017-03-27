@@ -23,6 +23,12 @@
         </a>
       {{ end }}
 
+      {{ if .Site.Params.codepen }}
+        <a class="social-media__header-icon mdl-color-text--grey-800" href="http://codepen.io/{{ .Site.Params.codepen }}" target="_blank">
+          <i class="fa fa-codepen" aria-hidden="true"></i>
+        </a>
+      {{ end }}
+
       {{ if .Site.RSSLink }}
         <a class="social-media__header-icon mdl-color-text--grey-800" href="{{ .Site.RSSLink }}" target="_blank">
           <i class="fa fa-rss" aria-hidden="true"></i>

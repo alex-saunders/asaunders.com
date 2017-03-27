@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "grunt watch",
-    "create": "hugo server",
+    "create": "hugo server --watch",
     "build": "grunt ; hugo ; firebase deploy"
   },
   "author": "Alex Saunders",

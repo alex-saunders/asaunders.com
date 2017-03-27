@@ -3,7 +3,7 @@
 
   {{ partial "common/head.html" . }}
 
-  <body class="mdl-color--grey-100">
+  <body>
     <!-- Social Media Bar -->
     <div class="mdl-color--white mdl-color-text--grey-100 page-header page-header__social-media">
       {{ partial "common/social_media_bar.html" . }}
@@ -25,19 +25,17 @@
     <div class="masthead mdl-color--{{ .Params.color }}-500">
       <div class="cover-photo" {{ if .Params.coverPhoto }} style="background-image: url('/img/compressed{{ .Params.coverPhoto }}')" {{ end }}>
       </div>
-      <div class="page-title">
-         <div class="mdl-typography--display-3 mdl-color-text--white page-title--main">
+      <div class="page-title single">
+         <div class="mdl-typography--display-3 mdl-color-text--white page-title--single">
            {{ .Title }}
          </div>
-         <div class="mdl-typography--headline mdl-color-text--white page-title--sub">
-           {{ .Date.Format .Site.Params.dateform }} <br />
-         </div>
-         <div class="mdl-typography--title page-title--details mdl-color-text--white">
-           {{ .FuzzyWordCount }} Words &middot; {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
-         </div>
+         <hr class="page-title--divider">
+         {{ if .Params.summary }}
+           <div class="page-title--summary mdl-color-text--white">
+             {{ .Params.summary }}
+           </div>
+         {{ end }}
       </div>
-
-      <!-- <div class="masthead--accent mdl-color--{{ .Params.color }}-700"></div> -->
 
       <div class="masthead--accent">
        <svg viewBox="0 0 100 100" width='100%' height='100%' preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +52,12 @@
 
            <div class="mdl-cell mdl-cell--12-col content-container mdl-shadow--2dp">
              <article class="markdown blog">
+               <div class="summary">
+                 <p>
+                    {{ .Date.Format .Site.Params.dateform }} &middot;
+                    {{ .FuzzyWordCount }} Words &middot; Est {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+                 </p>
+               </div>
                <div class="content">
                  {{ .Content }}
                </div>
@@ -97,7 +101,6 @@
     <!-- Footer -->
     {{ partial "common/footer.html" . }}<!-- /.Footer -->
 
-    <script src="{{ .Site.BaseURL }}js/prism.js"></script>
     <script src="{{ .Site.BaseURL }}js/material.min.js"></script>
   </body>
 </html>

@@ -28,12 +28,6 @@
   </url>
   
   <url>
-    <loc>https://asaunders.com/blogtags/</loc>
-    <lastmod>2017-02-06T22:55:04+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://asaunders.com/</loc>
     <lastmod>2017-02-06T22:55:04+00:00</lastmod>
   </url>
@@ -49,8 +43,26 @@
   </url>
   
   <url>
+    <loc>https://asaunders.com/blogtags/hugo/</loc>
+    <lastmod>2017-02-06T22:55:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/blogtags/jekyll/</loc>
+    <lastmod>2017-02-06T22:55:04+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://asaunders.com/projects/</loc>
     <lastmod>2017-02-06T22:54:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://asaunders.com/blogtags/static-site-generation/</loc>
+    <lastmod>2017-02-06T22:55:04+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

@@ -1,7 +1,9 @@
 <div class="mdl-cell mdl-cell--{{if .IsHome }}6{{ else }}{{ .Params.desktopWidth }}{{ end }}-col mdl-cell--{{ if .IsHome }}8{{ else }}{{ .Params.mobileWidth }}{{ end }}-col-tablet mdl-cell--top">
    <div class="mdl-card mdl-shadow--2dp">
       <div class="mdl-card__media mdl-color--grey-200" {{ if .Params.thumbnail }} style="background-image: url('/img/compressed{{ .Params.thumbnail }}')" {{ end }}>
-
+        {{ if .Truncated }}
+          <a class="mdl-card__link" href="{{ .RelPermalink }}">
+        {{ end }}
       </div>
       <div class="mdl-card__supporting-text">
         <h4 class="mdl-typography--display-1 mdl-color-text--grey-800">
@@ -33,8 +35,7 @@
       </div>
 
       {{ if .Truncated }}
-        <a class="mdl-card__actions mdl-card--border mdl-js-ripple-effect" href="{{ .RelPermalink }}">
-          <span class="mdl-ripple"></span>
+        <a class="mdl-card__actions mdl-card--border" href="{{ .RelPermalink }}">
           <div class="mdl-card__actions-button mdl-color-text--{{ .Params.color }}">
             READ MORE
           </div>
