@@ -22,11 +22,9 @@
 
 &lt;p&gt;After some research, I found that at the moment there is the big boy of SSGs (static site generators) in Jekyll and there&amp;rsquo;s it&amp;rsquo;s up-and-coming rival, Hugo. In this post, i&amp;rsquo;ll explain the fruits of my research and detail what I found to be the most important pros and cons of each static site generator.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;DISCLAIMER: In the end I chose to use Hugo for this site but I will attempt to provide as unbiased of an opinion as possible when comparing the two.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;jekyll&#34;&gt;Jekyll&lt;/h1&gt;
 
-&lt;h3 id=&#34;jekyll&#34;&gt;Jekyll&lt;/h3&gt;
-
-&lt;p&gt;Jekyll is the current dominator of the field, being the go-to choice for many developers. It describes itself as &lt;em&gt;&amp;ldquo;a simple, blog-aware, static site generator&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Jekyll is the current leader of the pack, being the go-to choice for many developers. It describes itself as &lt;em&gt;&amp;ldquo;a simple, blog-aware, static site generator&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;That&lt;/p&gt;
 </description>

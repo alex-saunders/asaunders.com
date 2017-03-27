@@ -1,9 +1,12 @@
 .markdown {
+  line-height: 1.5;
+
   .summary {
     padding: 16px 16px 0px;
     float: right;
 
     p {
+      line-height: 1.5;
       font-size: 12px;
       margin: 0px;
       color: #777;
@@ -17,19 +20,28 @@
     h1, h2, h3, h4, h5, h6 {
       color: #333;
     }
+    h1 {
+      padding-bottom: 0.3em;
+      font-size: 2em;
+      border-bottom: 1px solid #eaecef;
+    }
+    h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.5em;
+      border-bottom: 1px solid #eaecef;
+    }
     pre {
 
     }
     p {
+      line-height: 1.5;
       font-size: 16px;
-      line-height: 28px;
       margin-bottom: 1.4em;
       font-weight: 400;
       color: #333;
     }
     p:first-child {
       font-size: 17px;
-      line-height: 30px;
       color: #333;
     }
     strong {
@@ -76,9 +88,35 @@
     }
     a {
       text-decoration: none;
+      color: #0366d6;
     }
     a:hover {
       text-decoration: underline;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      tr {
+        background-color: #fff;
+
+        th, td {
+          padding: 8px 16px;
+          border: 1px solid #dfe2e5;
+        }
+        th {
+          font-weight: 600;
+        }
+      }
+    }
+
+    hr {
+      border-width: 3px;
+      border-bottom: none;
+      border-right: none;
+      border-left: none;
+      border-color: rgba(0,0,0,0.1);
     }
   }
 
