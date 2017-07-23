@@ -1,0 +1,9 @@
+---
+title: 'All Posts'
+layout: listing
+type: post
+---
+
+{% for post in paginator.posts %}
+  {% include post-preview.html %}
+{% endfor %}

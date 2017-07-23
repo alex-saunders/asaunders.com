@@ -1,0 +1,29 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="{{ site.author }}">
+
+  {% if page.type == "post" %}
+  <meta itemprop="name" content="{{ page.title }}">
+  <meta itemprop="description" content="{{ page.excerpt | escape }}">
+  {% endif %}
+
+    <title>
+      {% if page.title %}
+        {{ site.title | escape }} - {{ page.title | escape }}
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
+    </title>
+
+  <link rel="stylesheet" href="/assets/dist/css/main.css">
+
+  <link href="/assets/dist/icons/favicon.ico" rel="icon">
+  <link rel="manifest" href="/manifest.json">
+
+  <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" />
+  <link href="/feed.xml" rel="feed" type="application/rss+xml" title="{{ site.title }} RSS Feed" />
+</head>

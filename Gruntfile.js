@@ -1,68 +1,74 @@
 module.exports = function(grunt) {
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		sass: {
-			dist: {
-				files: {
-					'themes/material/static/css/style.css' : 'themes/material/static/sass/style.scss'
-				}
-			}
-		},
-		autoprefixer: {
-	    dist: {
-	      src: 'themes/material/static/css/style.css'
-	    }
-	  },
-		cssmin: {
-			dist: {
-				files: {
-					 'themes/material/static/css/style.min.css': 'themes/material/static/css/style.css',
-					 'themes/material/static/css/material.min.css': 'themes/material/static/css/material.css',
-					 'themes/material/static/css/prism.min.css': 'themes/material/static/css/prism.css'
-				}
-			}
-		},
-		imagemin: {
-			png: {
-				options: {
-					optimizationLevel: 7
-				},
-				files: [{
-					expand: true,
-					cwd: 'static/img/src/',
-					src: ['**/*.png', '*.png'],
-					dest: 'static/img/compressed/',
-					ext: '.png'
-				}]
-			},
-			jpg: {
-				options: {
-					optimizationLevel: 7
-				},
-				files: [{
-					expand: true,
-					cwd: 'static/img/src/',
-					src: ['**/*.jpg', '*.jpg'],
-					dest: 'static/img/compressed/',
-					ext: '.jpg'
-				}]
-			}
-		},
-		watch: {
-			css: {
-				files: ['themes/material/static/sass/*.scss', 'themes/material/static/css/style.css'],
-				tasks: ['sass', 'autoprefixer', 'cssmin']
-			},
-			image: {
-				files: ['static/img/src/*.png', 'static/img/src/*.jpg', 'static/img/src/**/*.png', 'static/img/src/**/*.jpg'],
-				tasks: ['imagemin']
-			}
-		}
-	});
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'imagemin']);
-}
+
+  grunt.initConfig({
+      sass: {
+          options: {
+              sourceMap: true
+          },
+          dist: {
+              files: {
+                  'assets/dist/css/main.css': 'assets/src/scss/styles.scss'
+              }
+          }
+      },
+
+      postcss: {
+        options: {
+          map: true, 
+          processors: [
+            require('autoprefixer')({browsers: 'last 4 versions'}), // add vendor prefixes
+            require('cssnano')() // minify the result
+          ]
+        },
+        dist: {
+          src: 'assets/dist/css/main.css'
+        },
+      },
+
+      jekyll: {
+        dist: {
+          options: {
+            config: '_config.yml',
+          }
+        }
+      },
+
+      connect: {
+        server: {
+          options: {
+            livereload: '9090',
+            hostname: 'localhost',
+            base: '_site',
+            port: 8080
+          }
+        }
+      },
+
+      watch: {
+        options: {
+          livereload: {
+            host: 'localhost',
+            port: 9090
+          }
+        },
+        sass: {
+          files: ['assets/src/scss/**/*'],
+          tasks: ['sass', 'jekyll']
+        },
+        jekyll: {
+          files: ['_includes/**/*', '_layouts/**/*', '_posts/**/*', '_config.yml', 'posts/**/*'],
+          tasks: ['jekyll']
+        }
+      }
+  });
+
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-postcss')
+  grunt.loadNpmTasks('grunt-jekyll')
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  
+  grunt.registerTask('default', ['sass', 'postcss', 'jekyll']);
+  grunt.registerTask('serve', ['sass', 'jekyll', 'connect', 'watch']);
+
+};

@@ -1,0 +1,53 @@
+{% if include.featured %}
+  <div class="cell-featured">
+{% else %}
+  <div class="cell-preview">
+{% endif %}
+  {% if include.featured %}
+    <article class="post-preview--featured">
+  {% else %}
+    <article class="post-preview">
+  {% endif %}
+    <div class="preview-wrapper">
+      <a class="preview-link" href="{{ post.url }}">
+        {% if post.image %}
+          <div class="preview-img" style="background-image: url('{{ post.image }}');"></div>
+        {% endif %}
+        <div class="preview-body">
+          {% if include.featured %}
+            <h3 class="preview-title--featured">
+          {% else %}
+            <h3 class="preview-title">
+          {% endif %}
+            <span>
+              {{ post.title }}
+            </span>
+          </h3>
+          {% if include.featured %}
+            <p class="preview-summary--featured">
+          {% else %}
+            <p class="preview-summary">
+          {% endif %}
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+          </p>
+        </div>
+      </a>
+      <div class="preview-footer">
+        <div class="footer-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.5 9A1.5 1.5 0 0 0 7 7.5 1.5 1.5 0 0 0 5.5 6 1.5 1.5 0 0 0 4 7.5 1.5 1.5 0 0 0 5.5 9m12 2.6c.3.3.5.8.5 1.4 0 .6-.2 1-.6 1.4l-5 5c-.3.4-.8.6-1.4.6-.6 0-1-.2-1.4-.6l-7-7C2.2 12 2 11.6 2 11V6c0-1 1-2 2-2h5c.6 0 1 .2 1.4.6l7 7m-4-6l1-1 7 7c.4.3.6.8.6 1.4 0 .6-.2 1-.6 1.4L16 19.8l-1-1 5.8-5.8-7.3-7.3z"/></svg>
+          <ul class="tags">
+            {% for tag in post.tags %}
+            <li>
+              <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-section">
+          <time class="date">{{ post.date | date_to_string }}</time>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5C4 3 3 4 3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5c0-1-1-2-2-2h-1V1m-1 11h-5v5h5v-5z"/></svg>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

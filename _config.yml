@@ -1,0 +1,105 @@
+# Where things are
+source:       .
+layouts_dir:  _layouts
+data_dir:     _data
+includes_dir: _includes
+tag_dir:      tags
+
+collections:
+  components:
+    output:   true
+  design:
+    output:   true
+
+# Handling Reading
+title:                "Alex Saunders"
+safe:                 false
+include:              [".htaccess", "manifest.json"]
+exclude:              ["Gruntfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "gruntfile.js", "package-lock.json", "package.json", "assets/src", "LICENSE.txt", "README.md"]
+keep_files:           [".git", ".svn"]
+encoding:             "utf-8"
+markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter:  false
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+plugins: []
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     /posts/:year/:month/:day/:title/
+paginate:      6
+paginate_path: /posts/:num/
+timezone:      null
+
+quiet:    false
+verbose:  false
+
+# variables
+author:   "Alex Saunders"
+twitter:  "AlexJRsaunders"
+github:   "alex-saunders"
+linkedin: "alexjrsaunders"
+email:    "alexjrsaunders@gmail.com"
+
+# collections
+defaults: 
+  -
+    scope:
+      path: "_posts" 
+      type: "posts"
+    values:
+      layout: "post"
+      type:   "post"
+      author: "Alex Saunders"
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  syntax_highlighter: rouge
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

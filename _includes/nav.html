@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="nav">
+    {% if page.url == "/" %}
+      <a class="nav-logo nav-item active" href="/">
+    {% else %}
+      <a class="nav-logo nav-item" href="/">
+    {% endif %}
+      <div class="logo-img"></div>
+      <span class="logo-text">Alex Saunders</span>
+    </a>
+    <div class="nav-main">
+      {% if site.github %}
+        <a class="nav-item" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer">
+          Github
+        </a>
+      {% endif %}
+      {% if site.twitter %}
+        <a class="nav-item" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener noreferrer">
+          Twitter
+        </a>
+      {% endif %}
+      {% if page.type == "post" %}
+        <a class="nav-item accent active" href="/posts">Blog</a>
+      {% else %}
+        <a class="nav-item accent" href="/posts">Blog</a>
+      {% endif %}
+    </div>
+  </div>
+</header>

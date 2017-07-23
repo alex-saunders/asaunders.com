@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<main class="page-container--gradient">
+    <section class="grid">
+      <div class="cell cell-masthead">
+        <h1 class="masthead-title">
+          Blog
+        </h1>
+        <h2 class="masthead-subtitle slug">
+          {{ page.title }}{{ page.test }}
+        </h2>
+        <a class="masthead-icon" href="/feed.xml" target="_blank" rel="noopener noreferrer">
+          <svg height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><circle cx="6.2" cy="17.8" r="2.2"/><path d="M4 4.4v3c7 0 12.7 5.6 12.7 12.6h3c0-8.6-7-15.6-15.7-15.6zM4 10v3c4 0 7 3 7 7h3c0-5.5-4.5-10-10-10z"/></svg>
+        </a>
+      </div>
+    </section>
+    <section class="grid">
+      <div class="cell-title--blog">
+      </div>
+      {{ content }}
+      
+      
+      
+      {% if paginator %}
+        <div class="cell cell-preview--footer">
+          {% if paginator.previous_page %}
+            <a class="footer-cta" href="{{ paginator.previous_page_path }}">
+              <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+              Previous
+            </a>
+          {% else %}
+            <span class="footer-cta disabled">
+              <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+              Previous
+            </span>
+          {% endif %}
+          {% for i in (1..paginator.total_pages) %}
+            {% assign href = i %}
+            {% if i == 1 %}
+              {% assign href = '' %}
+            {% endif %}
+            {% if i == paginator.page %}
+              <a class="footer-cta active" href="/posts/{{ href }}">
+            {% else %}
+              <a class="footer-cta" href="/posts/{{ href }}">
+            {% endif %}
+              <span>
+                {{ i }}
+              </span>
+            </a>
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <a class="footer-cta" href="{{ paginator.next_page_path }}">
+              Next
+              <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.6 7.4l4.6 4.6-4.6 4.6L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+            </a>
+          {% else %}
+            <span class="footer-cta disabled">
+              Next
+              <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.6 7.4l4.6 4.6-4.6 4.6L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </section>
+    {% include footer.html %}
+  </main>

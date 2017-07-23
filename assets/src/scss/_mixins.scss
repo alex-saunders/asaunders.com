@@ -1,0 +1,37 @@
+@import './theme';
+
+@mixin inline-link() {
+  color: $body-accent-text;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid $body-accent-text;
+  }
+}
+
+@mixin block-link() {
+  color: $link-text;
+  text-decoration: none;
+  transition: all 0.1s linear;
+  
+  svg {
+    fill: $link-text;
+    transition: all 0.1s linear;
+  }
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &:hover:not(.disabled), &.active:not(.disabled) {
+    color: $accent-1;
+    svg {
+      fill: $accent-1;
+    }
+  }
+}
+
+@mixin title-link() {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  text-decoration-color: $accent-1;
+}

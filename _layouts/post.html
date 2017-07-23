@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% assign post = page %}
+<main class="page-container--gradient">
+    <section class="grid">
+      <div class="cell cell-masthead">
+        <h1 class="masthead-title">
+          HTML Ipsum Presents
+        </h1>
+      </div>
+    </section>
+    <div class="content-wrapper">
+      {% if post.image %}
+      <div class="wrapper-image" style="background-image: url('{{ post.image }}');"></div>
+      {% endif %}
+      <section class="grid">
+        <div class="cell-post">
+          <div class="post-details">
+            <ul>
+              <li>
+                <h1>Last updated</h1>
+                <time>{{ post.date | date_to_string }}</time>
+              </li>
+              <li>
+                <h1>Est. read time</h1>
+                <span>{% include read-time.html %}</span>
+              </li>
+              <li class="tags">
+                <h1>Tagged in</h1>
+                <ul>
+                  {% for tag in post.tags %}
+                  <li>
+                    <a href="/{{ site.tag_dir }}/{{ tag }}/">{{ tag }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <article class="post-content">
+            <h1>{{ post.title }}</h1>
+            {{ content }}
+          </article>
+          
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              var disqus_shortname = 'asaunders'; 
+              var disqus_identifier = "{{ page.url }}";
+
+              {% if jekyll.environment == "production" %}
+              {% else %}
+                var disqus_developer = 1;
+              {% endif %}
+
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </section>
+      {% include footer.html %}
+    </div>
+  </main>

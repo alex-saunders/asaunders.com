@@ -1,0 +1,30 @@
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/post';
+@import 'partials/footer';
+@import 'partials/grid';
+@import './theme';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+::selection {
+  background: $accent-1;
+  color: $body-accent-text;
+}
