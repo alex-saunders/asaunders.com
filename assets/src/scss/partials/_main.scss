@@ -76,7 +76,7 @@
       margin: 0 0 20px 0;
     }
     .masthead-subtitle {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       margin: 0 0 8px 0;
     }
@@ -127,7 +127,7 @@
           }
           .preview-summary--featured {
             color: $body-text;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.4;
           }
         }
@@ -192,7 +192,7 @@
 
     .preview-wrapper {
       box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-      background-color: $primary-3;
+      background-color: $primary-2;
 
       &:after {
         display: block;
@@ -219,12 +219,6 @@
         display: inline-block;
         text-decoration: none;
 
-        &:hover {
-          .preview-title {
-            @include title-link();
-          }
-        }
-
         .preview-img {
           height: 90px;
           width: 100%;
@@ -242,7 +236,7 @@
             right: 0;
             bottom: 0;
 
-            opacity: 0.4;
+            opacity: 0;
             background-color: #d2d2d2;
             background-image: linear-gradient($primary-2 50%, $primary-1 50%);
             background-size: 5px 7px;
@@ -259,19 +253,31 @@
           max-width: 100%;
 
           .preview-title {
+            position: relative;
             display: flex;
             align-items: center;
-            height: 69px;
             padding: 8px 16px;
-            font-size: 22px;
+            font-size: 20px;
             color: $body-accent-text;
-            background: $primary-2;
+            background: $accent-2;
             font-weight: 400;
             text-align: left;
-            transform: translateX(-7px);
-            border-radius: 3px;
+            transform: translateX(-14px);
             box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
             margin: 0;
+
+            &:after {
+              display: block;
+              content: '';
+              position: absolute;
+              bottom: -10px;
+              left: 0;
+              border-style: solid;
+              border-width: 5px;
+              width: 0;
+              height: 0;
+              border-color: $accent-1 $accent-1 transparent transparent;
+            }
 
             span {
               display: -webkit-box;
@@ -280,16 +286,17 @@
               overflow: hidden;
               text-overflow: ellipsis;
             }
+            
           }
           .preview-summary {
-            margin: 16px 8px;
+            margin: 16px 8px 0 8px;
           }
 
           .preview-summary {
             color: $body-text;
-            text-align: center;
+            text-align: left;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.35;
           }
         }
@@ -301,7 +308,6 @@
         font-size: 16px;
         height: 56px;
         padding: 16px 12px;
-        background-color: $primary-2;
 
         .footer-section {
           display: flex;
@@ -422,7 +428,7 @@
     }
     h1 {
       position: relative;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       text-transform: capitalize;
       margin: 16px 0;

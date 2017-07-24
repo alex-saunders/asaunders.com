@@ -1,5 +1,5 @@
 ---
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll! extra long title"
 date:   2017-07-23 01:03:14 +0100
 image: /assets/dist/images/me.jpg
 tags:
