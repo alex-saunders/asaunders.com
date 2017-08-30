@@ -66,6 +66,7 @@
             &:before {
               display: inline;
               content: '#';
+              margin-right: 1px;
             }
           }
         }
@@ -93,18 +94,28 @@
       color: $body-accent-text;
     }
     h1 {
-      font-size: 1.5em;
+      font-size: 1.75em;
     }
     a {
       @include block-link();
     }
     img {
-      width: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
 
       + p {
         margin-top: 4px;
         text-align: center;
       }
+      ~ em {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+    strong {
+      color: $body-accent-text;
     }
     blockquote {
       margin: 16px 0;
@@ -123,6 +134,10 @@
           content: '”';
         }
       }
+    }
+    .highlight {
+      width: 100%;
+      overflow-x: auto;
     }
   }
 }

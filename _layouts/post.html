@@ -6,7 +6,7 @@ layout: default
     <section class="grid">
       <div class="cell cell-masthead">
         <h1 class="masthead-title">
-          HTML Ipsum Presents
+          {{ post.title }}
         </h1>
       </div>
     </section>
@@ -39,7 +39,6 @@ layout: default
             </ul>
           </div>
           <article class="post-content">
-            <h1>{{ post.title }}</h1>
             {{ content }}
           </article>
           
@@ -67,3 +66,7 @@ layout: default
       {% include footer.html %}
     </div>
   </main>
+
+  {% for script in post.scripts %}
+  <script async src="{{ script }}"></script>
+  {% endfor %}
