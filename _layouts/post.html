@@ -26,16 +26,18 @@ layout: default
                 <h1>Est. read time</h1>
                 <span>{% include read-time.html %}</span>
               </li>
-              <li class="tags">
-                <h1>Tagged in</h1>
-                <ul>
-                  {% for tag in post.tags %}
-                  <li>
-                    <a href="/{{ site.tag_dir }}/{{ tag }}/">{{ tag }}</a>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </li>
+              {% if post.tags.size > 0 %}
+                <li class="tags">
+                  <h1>Tagged in</h1>
+                  <ul>
+                    {% for tag in post.tags %}
+                    <li>
+                      <a href="/{{ site.tag_dir }}/{{ tag }}/">{{ tag }}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
             </ul>
           </div>
           <article class="post-content">

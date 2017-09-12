@@ -138,6 +138,10 @@
     .highlight {
       width: 100%;
       overflow-x: auto;
+
+      .code {
+        padding: 0 0 0 8px;
+      }
     }
   }
 }

@@ -19,11 +19,11 @@ Recently i've been playing around with the new CSS layout spec - CSS Grid (I act
 Grid does not need to be defined as a body-level layout, the `display: grid` attribute can be placed on any parent element. You can then define a grid using the `grid-template-columns` and `grid-template-rows` properties. These properties define the track sizing functions of the grid rows and columns, each value, seperated by a space, defining the size of a row/column.
 
 ```css
-  .grid {
-    display: grid;
-    grid-template-columns: 50px 50px /* creates 2 columns of 50px height */
-    grid-template-rows: 100px 100px 100px /* creates 3 rows of 100px height */
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 50px 50px /* creates 2 columns of 50px height */
+  grid-template-rows: 100px 100px 100px /* creates 3 rows of 100px height */
+}
 ```
 
 All direct children of the parent now get laid out by the auto-placement algorithm, one for each grid cell. Extra rows will be created if needed.
@@ -39,11 +39,11 @@ You can use the `grid-gap` property to create a gap between columns and rows. It
 Also released with CSS is the new `repeat()` CSS function. As per the spec, `repeat()` represents a repeated fragment of the track-list, allowing for a large number of columns or rows that appear in a recurring pattern to be written in a more compact form. The function can be used on the `grid-template-rows` and `grid-template-columns` properties.
 
 ```css
-  .grid {
-    display: grid;
-    grid-template-rows: repeat(3, 100px); 
-    /* is equivalent to grid-template-rows: 100px 100px 100px */
-  }
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100px); 
+  /* is equivalent to grid-template-rows: 100px 100px 100px */
+}
 ```
 
 ## `fr` unit
@@ -51,17 +51,17 @@ Also released with CSS is the new `repeat()` CSS function. As per the spec, `rep
 The `fr` data type denotes a flexible length within a grid container. 1fr is for 1 part of the remaining available space (think of it like a fraction).
 
 ```css
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1f 1fr; 
-    /* creates 4 columns that each take up the same amount of space */
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1f 1fr; 
+  /* creates 4 columns that each take up the same amount of space */
+}
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 20px 2fr; 
-    /* creates 4 columns, with the last being double the width of the first 2. */
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 20px 2fr; 
+  /* creates 4 columns, with the last being double the width of the first 2. */
+}
 ```
 
 <p data-height="265" data-theme-id="0" data-slug-hash="wqQGxJ" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - fr" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/wqQGxJ/">CSS Grid - fr</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
@@ -79,10 +79,10 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
 
 
 ```css 
-  .grid {
-    display: grid;
-    grid-template-columns: minmax(100px, max-content) minmax(200px, 1fr) 150px;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) minmax(200px, 1fr) 150px;
+}
 ```
 
 <p data-height="265" data-theme-id="0" data-slug-hash="vJQypY" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - minmax" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/vJQypY/">CSS Grid - minmax</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
@@ -106,32 +106,32 @@ Using the `grid-template-areas` property on the grid container defines a grid te
 The following example creates a grid that's four columns wide by three rows tall. The entire top row will be taken up by the **header** area. The middle row will contain two **main** areas, one empty cell and one **sidebar** area. The last row is consumed by the **footer**.
 
 ```css
-  .grid {
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header header header"
-      "main main . sidebar"
-      "footer footer footer footer"
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer"
+}
 ```
 
 You can then use the `grid-area` property on grid-item child elements, referencing the names defined in `grid-template-areas` in order to place elements within the grid:
 
 ```css
-  .header {
-    grid-area: header;
-  }
-  .main {
-    grid-area: main;
-  }
-  .sidebar {
-    grid-area: sidebar;
-  }
-  .footer {
-    grid-area: footer;
-  }
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.footer {
+  grid-area: footer;
+}
 ```
 
 <p data-height="265" data-theme-id="0" data-slug-hash="NvEEJO" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - grid-template-areas" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/NvEEJO/">CSS Grid - grid-template-areas</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>

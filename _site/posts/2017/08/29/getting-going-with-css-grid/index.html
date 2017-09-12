@@ -88,20 +88,22 @@
 
 </span>
               </li>
-              <li class="tags">
-                <h1>Tagged in</h1>
-                <ul>
-                  
-                  <li>
-                    <a href="/tags/CSS/">CSS</a>
-                  </li>
-                  
-                  <li>
-                    <a href="/tags/Grid/">Grid</a>
-                  </li>
-                  
-                </ul>
-              </li>
+              
+                <li class="tags">
+                  <h1>Tagged in</h1>
+                  <ul>
+                    
+                    <li>
+                      <a href="/tags/CSS/">CSS</a>
+                    </li>
+                    
+                    <li>
+                      <a href="/tags/Grid/">Grid</a>
+                    </li>
+                    
+                  </ul>
+                </li>
+              
             </ul>
           </div>
           <article class="post-content">
@@ -117,11 +119,11 @@
 2
 3
 4
-5</pre></td><td class="code"><pre>  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">50px</span> <span class="m">50px</span> <span class="c">/* creates 2 columns of 50px height */</span>
-    <span class="n">grid-template-rows</span><span class="p">:</span> <span class="m">100px</span> <span class="m">100px</span> <span class="m">100px</span> <span class="c">/* creates 3 rows of 100px height */</span>
-  <span class="p">}</span>
+5</pre></td><td class="code"><pre><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">50px</span> <span class="m">50px</span> <span class="c">/* creates 2 columns of 50px height */</span>
+  <span class="n">grid-template-rows</span><span class="p">:</span> <span class="m">100px</span> <span class="m">100px</span> <span class="m">100px</span> <span class="c">/* creates 3 rows of 100px height */</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -142,11 +144,11 @@
 2
 3
 4
-5</pre></td><td class="code"><pre>  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">repeat</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">100px</span><span class="p">);</span> 
-    <span class="c">/* is equivalent to grid-template-rows: 100px 100px 100px */</span>
-  <span class="p">}</span>
+5</pre></td><td class="code"><pre><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">repeat</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">100px</span><span class="p">);</span> 
+  <span class="c">/* is equivalent to grid-template-rows: 100px 100px 100px */</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -165,17 +167,17 @@
 8
 9
 10
-11</pre></td><td class="code"><pre>  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">f</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span> 
-    <span class="c">/* creates 4 columns that each take up the same amount of space */</span>
-  <span class="p">}</span>
+11</pre></td><td class="code"><pre><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">f</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span> 
+  <span class="c">/* creates 4 columns that each take up the same amount of space */</span>
+<span class="p">}</span>
 
-  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">20px</span> <span class="m">2</span><span class="n">fr</span><span class="p">;</span> 
-    <span class="c">/* creates 4 columns, with the last being double the width of the first 2. */</span>
-  <span class="p">}</span>
+<span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">20px</span> <span class="m">2</span><span class="n">fr</span><span class="p">;</span> 
+  <span class="c">/* creates 4 columns, with the last being double the width of the first 2. */</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -198,10 +200,10 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
 <div class="language-css highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="n">minmax</span><span class="p">(</span><span class="m">100px</span><span class="p">,</span> <span class="n">max-content</span><span class="p">)</span> <span class="n">minmax</span><span class="p">(</span><span class="m">200px</span><span class="p">,</span> <span class="m">1</span><span class="n">fr</span><span class="p">)</span> <span class="m">150px</span><span class="p">;</span>
-  <span class="p">}</span>
+4</pre></td><td class="code"><pre><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="n">minmax</span><span class="p">(</span><span class="m">100px</span><span class="p">,</span> <span class="n">max-content</span><span class="p">)</span> <span class="n">minmax</span><span class="p">(</span><span class="m">200px</span><span class="p">,</span> <span class="m">1</span><span class="n">fr</span><span class="p">)</span> <span class="m">150px</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -234,15 +236,15 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
 6
 7
 8
-9</pre></td><td class="code"><pre>  <span class="nc">.grid</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">50px</span> <span class="m">50px</span> <span class="m">50px</span> <span class="m">50px</span><span class="p">;</span>
-    <span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
-    <span class="py">grid-template-areas</span><span class="p">:</span> 
-      <span class="s1">"header header header header"</span>
-      <span class="s1">"main main . sidebar"</span>
-      <span class="s1">"footer footer footer footer"</span>
-  <span class="p">}</span>
+9</pre></td><td class="code"><pre><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">50px</span> <span class="m">50px</span> <span class="m">50px</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="py">grid-template-areas</span><span class="p">:</span> 
+    <span class="s1">"header header header header"</span>
+    <span class="s1">"main main . sidebar"</span>
+    <span class="s1">"footer footer footer footer"</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -260,18 +262,18 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
 9
 10
 11
-12</pre></td><td class="code"><pre>  <span class="nc">.header</span> <span class="p">{</span>
-    <span class="py">grid-area</span><span class="p">:</span> <span class="n">header</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nc">.main</span> <span class="p">{</span>
-    <span class="py">grid-area</span><span class="p">:</span> <span class="n">main</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nc">.sidebar</span> <span class="p">{</span>
-    <span class="py">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nc">.footer</span> <span class="p">{</span>
-    <span class="py">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
-  <span class="p">}</span>
+12</pre></td><td class="code"><pre><span class="nc">.header</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">header</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.main</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">main</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.footer</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -338,9 +340,9 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
   </main>
 
   
-  <script async src=https://production-assets.codepen.io/assets/embed/ei.js></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
   
-  <script async src=//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js></script>
+  <script async src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
   
 
     <script>
