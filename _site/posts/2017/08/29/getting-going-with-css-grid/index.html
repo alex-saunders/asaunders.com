@@ -11,7 +11,7 @@
 
   
   <meta itemprop="name" content="Getting going with CSS Grid">
-  <meta itemprop="description" content="&lt;p&gt;Recently i’ve been playing around with the new CSS layout spec - CSS Grid (I actually even redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!&lt;/p&gt;
+  <meta itemprop="description" content="&lt;p&gt;Recently i’ve been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!&lt;/p&gt;
 
 ">
   
@@ -22,7 +22,7 @@
       
     </title>
 
-  <link rel="stylesheet" href="/assets/dist/css/main.css">
+  <link rel="stylesheet" href="/assets/dist/static/css/main-c218a88cac.css">
 
   <link href="/assets/dist/icons/favicon.ico" rel="icon">
   <link rel="manifest" href="/manifest.json">
@@ -38,7 +38,7 @@
     
       <a class="nav-logo nav-item" href="/">
     
-      <div class="logo-img"></div>
+      <img class="logo-img" src="/assets/dist/static/images/logo-85c8544418.png">
       <span class="logo-text">Alex Saunders</span>
     </a>
     <div class="nav-main">
@@ -107,7 +107,7 @@
             </ul>
           </div>
           <article class="post-content">
-            <p>Recently i’ve been playing around with the new CSS layout spec - CSS Grid (I actually even redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!</p>
+            <p>Recently i’ve been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!</p>
 
 <p>(<a href="https://drafts.csswg.org/css-grid/">The full spec for css grid can be found here</a>).</p>
 
@@ -354,6 +354,9 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
       ga('create', 'UA-91502214-1', 'auto');
       ga('send', 'pageview');
 
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.bundle.js');
+      }
     </script>
   </body>
   

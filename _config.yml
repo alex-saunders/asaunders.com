@@ -15,7 +15,7 @@ collections:
 title:                "Alex Saunders"
 safe:                 false
 include:              [".htaccess", "manifest.json"]
-exclude:              ["Gruntfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "gruntfile.js", "package-lock.json", "package.json", "assets/src", "LICENSE.txt", "README.md"]
+exclude:              ["Gruntfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "gruntfile.js", "package-lock.json", "package.json", "assets/src", "LICENSE.txt", "README.md", "sw.js"]
 keep_files:           [".git", ".svn"]
 encoding:             "utf-8"
 markdown_ext:         "markdown,mkdown,mkdn,mkd,md"

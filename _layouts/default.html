@@ -18,6 +18,9 @@
       ga('create', 'UA-91502214-1', 'auto');
       ga('send', 'pageview');
 
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.bundle.js');
+      }
     </script>
   </body>
   

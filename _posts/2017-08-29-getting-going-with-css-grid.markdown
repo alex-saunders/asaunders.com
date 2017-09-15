@@ -10,7 +10,7 @@ scripts:
   - "//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"
 ---
 
-Recently i've been playing around with the new CSS layout spec - CSS Grid (I actually even redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
+Recently i've been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
 
 ([The full spec for css grid can be found here](https://drafts.csswg.org/css-grid/)).
 
