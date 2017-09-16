@@ -137,7 +137,6 @@
     }
     .highlighter-rouge {
       width: 100%;
-      font-family: 'Roboto Mono', monospace;      
 
       .highlight {
         width: 100%;
@@ -148,6 +147,7 @@
         }
         td, span {
           font-size: 14px;
+          font-family: 'Roboto Mono', monospace;          
         }
       }
     }
