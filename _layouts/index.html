@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% comment %}
+See the paginate value in _config.yml for an explanation of this
+{% endcomment %}
+{% assign posts = site.posts | where: "layout", "post" %}
+
 <main class="page-container--gradient">
     <section class="grid">
       <div class="cell-title--featured">
@@ -9,7 +14,7 @@ layout: default
           Latest blog post
         </h2>
       </div>
-      {% for post in site.posts limit:1 %}
+      {% for post in posts limit:1 %}
         {% include post-preview.html featured=true %}
       {% endfor %}
       <div class="cell-title--preview">
@@ -17,7 +22,7 @@ layout: default
           Recent blog posts
         </h2>
       </div>
-      {% for post in site.posts offset:1 limit:5 %}
+      {% for post in posts offset:1 limit:5 %}
         {% include post-preview.html %}
       {% endfor %}
       <div class="cell cell-preview--footer">
@@ -36,7 +41,7 @@ layout: default
       <div class="cell cell-about">
         <div class="about">
           <figure class="profile-picture">
-            <img src="assets/dist/images/me2.jpg" class="">
+            <img src="/assets/dist/static/images/{{ site.data.assets.images['me.jpg'] }}" class="">
           </figure>
           <p>
             Hello, I'm Alex. I'm a third year computer science student at the University of Liverpool and an avid web developer.

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="offline">
+
+  {% include head.html %}
+
+  <body>
+      
+    {% include nav.html %}
+
+    <main class="page-container--gradient">
+        <section class="grid">
+          <div class="cell cell-masthead">
+            <h1 class="masthead-title">
+              You are offline
+            </h1>
+          </div>
+        </section>
+        <div class="content-wrapper">
+          <section class="grid">
+            <div class="cell-post">
+              <article class="post-content">
+                Try running to your nearest router and pointing your phone directly at it.
+
+                <img src="/assets/dist/static/images/{{ site.data.assets.images['xkcd.png'] }}" class="offline-xkcd">
+              </article>
+            </div>
+          </section>
+          {% include footer.html %}
+        </div>
+      </main>
+  </body>
+</html>

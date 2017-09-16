@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Alex Saunders">
+
+  
+
+    <title>
+      
+        Alex Saunders - Today I Learned
+      
+    </title>
+
+  <link rel="stylesheet" href="/assets/dist/static/css/main-c218a88cac.css">
+
+  <link href="/assets/dist/icons/favicon.ico" rel="icon">
+  <link rel="manifest" href="/manifest.json">
+
+  <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Alex Saunders RSS Feed" />
+  <link href="/feed.xml" rel="feed" type="application/rss+xml" title="Alex Saunders RSS Feed" />
+</head>
+
+  <body>
+      
+      <header class="header">
+  <div class="nav">
+    
+      <a class="nav-logo nav-item" href="/">
+    
+      <img class="logo-img" src="/assets/dist/static/images/logo-85c8544418.png">
+      <span class="logo-text">Alex Saunders</span>
+    </a>
+    <div class="nav-main">
+      
+        <a class="nav-item" href="https://github.com/alex-saunders" target="_blank" rel="noopener noreferrer">
+          Github
+        </a>
+      
+      
+        <a class="nav-item" href="https://twitter.com/AlexJRsaunders" target="_blank" rel="noopener noreferrer">
+          Twitter
+        </a>
+      
+      
+        <a class="nav-item accent" href="/posts">Blog</a>
+      
+    </div>
+  </div>
+</header>
+
+      
+<main class="page-container--gradient">
+    <section class="grid">
+      <div class="cell cell-masthead">
+        <h1 class="masthead-title">
+          Today I Learned
+        </h1>
+      </div>
+    </section>
+    <div class="content-wrapper">
+      
+      <div class="wrapper-image" style="background-image: url('/assets/dist/images/today-i-learned/today-i-learned-masthead.jpg');"></div>
+      
+      <section class="grid">
+        <div class="cell-post">
+          <div class="post-details">
+            <ul>
+              <li>
+                <h1>Last updated</h1>
+                <time>12 Sep 2017</time>
+              </li>
+              <li>
+                <h1>Est. read time</h1>
+                <span>
+
+  2 mins
+
+</span>
+              </li>
+              
+            </ul>
+          </div>
+          <article class="post-content">
+            <p>I aim to use this space to keep an updated list of things I recently learnt and found interesting enough to note down.</p>
+
+<style>
+  figure.example {
+    max-width: 100%;
+    background: #3099DD;
+    padding: 8px;
+    margin: 16px 0;
+  }
+  figure.example figcaption {
+    font-size: 22px;
+    text-align: center;
+    background: #0e2439;
+  }
+  figure.example .fill {
+    margin: 8px auto;
+    width: 250px;
+    height: 250px;
+    background: #fff;
+  }
+  figure.example p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+  }
+
+  figure.example.min-content {
+    width: min-content;
+  }
+  figure.example.max-content {
+    width: max-content;
+  }
+
+  .footer-example > div {
+    border: 1px solid red;
+  }
+  .footer-example .left {
+    float: left;
+  }
+  .footer-example .right {
+    float: right;
+  }
+  .footer-example .center {
+    margin: 0 auto;
+    width: max-content;
+  }
+</style>
+
+<h1 id="2017-09-12-max--min-content">2017-09-12: max &amp; min-content</h1>
+
+<p>There exists 2 values for the css <code class="highlighter-rouge">width</code> attribute that I didn’t know about: <code class="highlighter-rouge">max-content</code> &amp; <code class="highlighter-rouge">min-content</code>. Respectively, they adjust the width of an element to be that of the widest or most narrow object it contains. See examples below:</p>
+
+<p>Using <code class="highlighter-rouge">width: min-content</code>, the card’s width is set to the most narrow element within it, that being the white square, which has a width of 250px.</p>
+
+<figure class="example min-content">
+  <figcaption>min-content</figcaption>
+  <div class="fill"></div>
+  <p>Ut aute in nisi cillum consequat excepteur minim culpa non fugiat deserunt.</p>
+</figure>
+
+<p>Using <code class="highlighter-rouge">width: max-content</code>, the card’s width is set to the widest element within it, that being the <code class="highlighter-rouge">&lt;p&gt;</code> element below the white square.</p>
+
+<figure class="example max-content">
+  <figcaption>max-content</figcaption>
+  <div class="fill"></div>
+  <p>Ut aute in nisi cillum consequat excepteur minim culpa non fugiat deserunt.</p>
+</figure>
+
+<p>Using this, we can create a layout with elements aligned to the left and right, with one in the center, that doesn’t overlap the elements when the screen size is too small to contain all elements on the same line (a surprisingly hard challenge, even with the likes of flexbox).</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="nf">#left</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#right</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#center</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="n">max-content</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="footer-example">
+  <div class="left">
+    Euexconsequatvelitpariatur.
+  </div>
+  <div class="right">
+    Loremduissitelit.
+  </div>
+  <div class="center">
+    Doloreinlabore.
+  </div>
+</div>
+
+<p>Try resizing the screen, the elements will stack on top of each other instead of overlapping, whilst keeping the middle element centered. Magic!</p>
+
+<p><strong>N.B:</strong> The support for this currently isn’t great, firefox only supports using max &amp; min-content with width, not height, and you must prefix it with -moz-. Safari has partial support and requires the -webkit- prefix. <a href="http://caniuse.com/#feat=intrinsic-width">See full browser compatability here</a>.</p>
+
+          </article>
+          
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              var disqus_shortname = 'asaunders'; 
+              var disqus_identifier = "/posts/2017/09/12/today-i-learned/post/";
+
+              
+                var disqus_developer = 1;
+              
+
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+  <span class="footer-section">
+    © Copyright 2017 Alex Saunders
+  </span>
+  <span class="footer-section">
+    Powered by Jekyll, theme designed by myself.
+  </span>
+</footer>    
+  </main>
+
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91502214-1', 'auto');
+      ga('send', 'pageview');
+
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
+  </body>
+  
+
+</html>

@@ -20,7 +20,7 @@
       
     </title>
 
-  <link rel="stylesheet" href="/assets/dist/css/main.css">
+  <link rel="stylesheet" href="/assets/dist/static/css/main-c218a88cac.css">
 
   <link href="/assets/dist/icons/favicon.ico" rel="icon">
   <link rel="manifest" href="/manifest.json">
@@ -36,7 +36,7 @@
     
       <a class="nav-logo nav-item" href="/">
     
-      <div class="logo-img"></div>
+      <img class="logo-img" src="/assets/dist/static/images/logo-85c8544418.png">
       <span class="logo-text">Alex Saunders</span>
     </a>
     <div class="nav-main">
@@ -75,6 +75,8 @@
       <div class="cell-title--blog">
       </div>
       
+
+
   
 
   
@@ -97,13 +99,13 @@
             <h3 class="preview-title">
           
             <span>
-              Getting going with CSS Grid              
+              Getting going with CSS Grid       
             </span>
           </h3>
           
             <p class="preview-summary">
           
-            Recently i’ve been playing around with the new CSS layout spec - CSS Grid (I actually even redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
+            Recently i’ve been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
 
 
           </p>
@@ -162,6 +164,9 @@
       ga('create', 'UA-91502214-1', 'auto');
       ga('send', 'pageview');
 
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js');
+      }
     </script>
   </body>
   

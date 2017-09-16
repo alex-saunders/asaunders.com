@@ -145,3 +145,16 @@
     }
   }
 }
+
+.offline .post-content {
+  text-align: center;
+
+  & > img {
+    margin: 16px auto;
+  }
+}
+
+.offline .content-wrapper {
+  margin: 0;
+  padding: 16px 0 0;
+}
