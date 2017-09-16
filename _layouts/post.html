@@ -12,9 +12,7 @@ layout: default
     </section>
     <div class="content-wrapper">
       {% if post.image %}
-      <div class="wrapper-image">
-        <img src="{{ post.image }}" />
-      </div>
+      <div class="wrapper-image" style="background-image: url('{{ post.image }}');"></div>
       {% endif %}
       <section class="grid">
         <div class="cell-post">

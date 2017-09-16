@@ -135,12 +135,20 @@
         }
       }
     }
-    .highlight {
+    .highlighter-rouge {
       width: 100%;
-      overflow-x: auto;
+      font-family: 'Roboto Mono', monospace;      
 
-      .code {
-        padding: 0 0 0 8px;
+      .highlight {
+        width: 100%;
+        overflow: auto;
+
+        .code {
+          padding: 0 0 0 8px;
+        }
+        td {
+          font-size: 14px;
+        }
       }
     }
   }

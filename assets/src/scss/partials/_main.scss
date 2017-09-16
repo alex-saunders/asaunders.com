@@ -59,10 +59,7 @@
       border: 5px solid $primary-2;
 
       background-color: $primary-3;
-
-      > img {
-        height: 100%;
-      }
+      background-size: cover;
     }
   }
 
