@@ -45,7 +45,7 @@ router.use('/assets/dist/images', (req, res, next) => {
   next();
 });
 
-router.get('/sw.js', async function(req, res) {
+router.get('/sw.js', async (req, res) => {
   const input = fs.createReadStream('sw.js');
 
   let assetsToCache = [
@@ -85,7 +85,7 @@ router.get('/sw.js', async function(req, res) {
       'static-offline': () => JSON.stringify(offlinePath)
     })
   ).pipe(res);
-}());
+});
 
 router.get('/posts/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:title(*)/post/', (req, res) => {
   console.log('getting a post')
