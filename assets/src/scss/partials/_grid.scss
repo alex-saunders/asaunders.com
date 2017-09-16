@@ -80,6 +80,10 @@
   }
   .cell-post {
     grid-column: span 12;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
   }
 
 }
