@@ -4,16 +4,15 @@ const rename      = require("gulp-rename");
 const postcss     = require('gulp-postcss');
 const exec        = require('gulp-exec');
 const connect     = require('gulp-connect');
+const nodemon     = require('gulp-nodemon');  
 const livereload  = require('gulp-livereload');
+const gls         = require('gulp-live-server');
 const imagemin    = require('gulp-imagemin');
 const rev         = require('gulp-rev');
-const revReplace  = require('gulp-rev-replace');
 const clean       = require('gulp-clean');
 const rollup      = require('gulp-better-rollup');
 
 const json          = require('rollup-plugin-json');
-const resolve       = require('rollup-plugin-node-resolve');
-const commonjs      = require('rollup-plugin-commonjs');
 const autoprefixer  = require('autoprefixer');
 const cssnano       = require('cssnano');
 
@@ -30,13 +29,10 @@ const paths = {
     watch: './assets/src/images/**/*',
     rev: 'images.json'
   },
-  rollup: {
-    target: './sw.js',
-    watch: ['./sw.js', './generate-revmap.js']
-  },
   jekyll: {
     target: './',
-    watch: ['_includes/**/*', '_layouts/**/*', '_posts/**/*', '_config.yml', 'posts/**/*', 'assets/dist/**/*', 'sw.bundle.js']
+    watch: ['_includes/**/*', '_layouts/**/*', '_posts/**/*', 
+    '_plugins/**/*', '_config.yml', 'posts/**/*', 'sw.js']
   },
   rev: {
     manifest: './_data/assets'
@@ -78,13 +74,7 @@ gulp.task('imagemin', ['clean:images'], () => {
     .pipe(gulp.dest(paths.rev.manifest));
 });
 
-gulp.task('generate-revmap', ['css', 'imagemin'], () => {
-  return gulp.src('./')
-    .pipe(exec('node generate-revmap'))
-    .pipe(exec.reporter())
-});
-
-gulp.task('rollup', ['generate-revmap'], () => {
+gulp.task('rollup', ['css', 'imagemin'], () => {
   gulp.src(paths.rollup.target)
     .pipe(rollup({
       plugins: [
@@ -95,32 +85,30 @@ gulp.task('rollup', ['generate-revmap'], () => {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('jekyll', () => {
+gulp.task('jekyll', ['css', 'imagemin'], () => {
   return gulp.src(paths.jekyll.target)
     .pipe(exec('bundle exec jekyll build'))
-    .pipe(exec.reporter())
     .pipe(livereload());
 });
 
-gulp.task('connect', () => {
-  connect.server({
-    root: '_site',
-    host: 'localhost',
-    port: 8080,
-    livereload: {
-      port: 9090
-    }
+gulp.task('server', ['jekyll'], function (){  
+  return nodemon({
+      'script': 'server.js',
+      'watch' : 'server.js'
   });
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['server'], () => {
   livereload.listen({
     port: 9090
   });
-  gulp.watch(paths.sass.watch, ['rollup']);
-  gulp.watch(paths.imagemin.watch, ['rollup']);
-  gulp.watch(paths.rollup.target, ['rollup']);
+  gulp.watch(paths.sass.watch, ['jekyll']);
+  gulp.watch(paths.imagemin.watch, ['jekyll']);
   gulp.watch(paths.jekyll.watch, ['jekyll']);
 });
 
-gulp.task('default', ['css', 'imagemin', 'rollup', 'jekyll', 'connect', 'watch']);
+gulp.task('default', ['jekyll'], function () {
+  var server = gls('server.js', {env: { NODE_ENV: 'production' }}, false);
+  return server.start();
+})
+gulp.task('serve', ['server', 'watch']);

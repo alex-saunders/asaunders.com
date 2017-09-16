@@ -4,6 +4,11 @@ layout: listing
 type: post
 ---
 
-{% for post in paginator.posts %}
+{% comment %}
+See the paginate value in _config.yml for an explanation of this
+{% endcomment %}
+{% assign posts = paginator.posts | where: "layout", "post" %}
+
+{% for post in posts %}
   {% include post-preview.html %}
 {% endfor %}

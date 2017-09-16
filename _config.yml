@@ -5,11 +5,6 @@ data_dir:     _data
 includes_dir: _includes
 tag_dir:      tags
 
-collections:
-  components:
-    output:   true
-  design:
-    output:   true
 
 # Handling Reading
 title:                "Alex Saunders"
@@ -47,7 +42,13 @@ show_dir_listing: false
 
 # Outputting
 permalink:     /posts/:year/:month/:day/:title/
-paginate:      6
+# The multi-post plugin (used to create the 'includes' for each post, for the
+# streaming service worker) generates a new post in site.posts for each layout 
+# so we have to multiply the actual paginate value we want by the number 
+# of layouts (so in this case, 6 * 2)
+# this is also why we are filtering the post previews we display by 
+# their layout values.
+paginate:      12
 paginate_path: /posts/:num/
 timezone:      null
 
@@ -66,10 +67,9 @@ defaults:
   -
     scope:
       path: "_posts" 
-      type: "posts"
     values:
-      layout: "post"
-      type:   "post"
+      layout: ["post", "include"]
+      permalink: /posts/:year/:month/:day/:title/
       author: "Alex Saunders"
 
 liquid:

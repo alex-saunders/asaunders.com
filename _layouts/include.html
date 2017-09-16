@@ -1,8 +1,4 @@
----
-layout: default
----
 {% assign post = page %}
-<main class="page-container--gradient">
     <section class="grid">
       <div class="cell cell-masthead">
         <h1 class="masthead-title">
@@ -66,9 +62,10 @@ layout: default
         </div>
       </section>
     </div>
-    {% include footer.html %}    
-  </main>
 
+  <script>
+    document.title = `Alex Saunders - {{ post.title }}`
+  </script>
   {% for script in post.scripts %}
   <script async src="{{ script }}"></script>
   {% endfor %}
