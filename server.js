@@ -88,8 +88,6 @@ router.get('/sw.js', async (req, res) => {
 });
 
 router.get('/posts/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:title(*)/post/', (req, res) => {
-  console.log('getting a post')
-
   const dir = `_site/posts/${req.params.year}/${req.params.month}/${req.params.day}/${req.params.title}/`;
   const filepath = `${dir}post/index.html`;
   res.sendFile(filepath, {
