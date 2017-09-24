@@ -1,6 +1,6 @@
 const version     = require('static-version')();
 const toCache     = require('static-assets')();
-const shellPaths  = require('static-shell')();
+const { shellStartPath, shellEndPath }  = require('static-shell')();
 const offlinePath = require('static-offline')();
 
 const staticCacheName = `static-${version}`;
@@ -41,9 +41,9 @@ async function streamArticle(event, url) {
   includeUrl.pathname = includeUrl.pathname.replace('/post/', '/include/');
 
   const parts = [
-    caches.match(shellPaths.shellStartPath),
+    caches.match(shellStartPath),
     fetch(includeUrl),
-    caches.match(shellPaths.shellEndPath)
+    caches.match(shellEndPath)
   ]
 
   const { readable, writable } = new IdentityStream();

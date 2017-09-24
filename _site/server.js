@@ -22,6 +22,8 @@ const offlinePath = `/offline-${createHash(offline)}.html`;
 const app = express();
 const port = (process.env.PORT || 8080);
 
+console.log(process.env.NODE_ENV)
+
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
     port: 9090,
@@ -52,9 +54,11 @@ router.get('/sw.js', async (req, res) => {
     offlinePath,
     shellStartPath,
     shellEndPath,
+    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700",
+    "https://fonts.googleapis.com/css?family=Roboto+Mono",
   ];
-  const hash = crypto.createHash('md5');
 
+  const hash = crypto.createHash('md5');
   
   const assetTypes = await promisify(fs.readdir)(path.resolve(__dirname, '_data', 'assets'));
   for (let assetType of assetTypes) {
@@ -111,7 +115,9 @@ router.use(express.static('_site'));
 
 app.use(router);
 
-app.listen(port, () => {
+app.set('host', "0.0.0.0");
+
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server listening on port ${port}`);
 });
 

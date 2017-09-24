@@ -52,7 +52,7 @@ I aim to use this space to keep an updated list of things I recently learnt and 
   }
 </style>
 
-# 2017-09-12: max &amp; min-content
+## 2017-09-12: max &amp; min-content
 
 There exists 2 values for the css `width` attribute that I didn't know about: `max-content` &amp; `min-content`. Respectively, they adjust the width of an element to be that of the widest or most narrow object it contains. See examples below:
 

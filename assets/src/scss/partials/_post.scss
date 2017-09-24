@@ -3,6 +3,7 @@
 @import '../constants';
 
 .cell-post {
+  width: 100%;
   max-width: 750px;
   margin: 0 auto;
 
@@ -98,6 +99,7 @@
     }
     a {
       @include block-link();
+      border-bottom: 1px solid;      
     }
     img {
       max-width: 100%;

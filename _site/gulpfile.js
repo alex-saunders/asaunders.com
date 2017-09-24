@@ -91,10 +91,10 @@ gulp.task('jekyll', ['css', 'imagemin'], () => {
     .pipe(livereload());
 });
 
-gulp.task('server', ['jekyll'], function (){  
+gulp.task('server', function (){  
   return nodemon({
       'script': 'server.js',
-      'watch' : 'server.js'
+      'watch' : ['server.js', 'sw.js', '_site/assets/**/*']
   });
 });
 
@@ -111,4 +111,4 @@ gulp.task('default', ['jekyll'], function () {
   var server = gls('server.js', {env: { NODE_ENV: 'production' }}, false);
   return server.start();
 })
-gulp.task('serve', ['server', 'watch']);
+gulp.task('serve', ['jekyll', 'server', 'watch']);

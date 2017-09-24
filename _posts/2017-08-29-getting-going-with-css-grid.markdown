@@ -10,11 +10,11 @@ scripts:
   - "//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"
 ---
 
-Recently i've been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
+Recently I've been playing around with the new CSS layout module - CSS Grid (I actually redesigned this site using it). I found a ton of resources for learning how to use CSS grid but found them to all be in different locations with different authors. Here I have collated what I consider to be the most important points to learn with CSS grid (it will probably need updating in the future, however), enjoy!
 
 ([The full spec for css grid can be found here](https://drafts.csswg.org/css-grid/)).
 
-# Defining a grid
+## Defining a grid
 
 Grid does not need to be defined as a body-level layout, the `display: grid` attribute can be placed on any parent element. You can then define a grid using the `grid-template-columns` and `grid-template-rows` properties. These properties define the track sizing functions of the grid rows and columns, each value, seperated by a space, defining the size of a row/column.
 
@@ -34,7 +34,7 @@ You can use the `grid-gap` property to create a gap between columns and rows. It
 
 <p data-height="265" data-theme-id="0" data-slug-hash="jLQWxW" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - grid-gap" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/jLQWxW/">CSS Grid - grid-gap</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-## `Repeat()` Function
+### `Repeat()` Function
 
 Also released with CSS is the new `repeat()` CSS function. As per the spec, `repeat()` represents a repeated fragment of the track-list, allowing for a large number of columns or rows that appear in a recurring pattern to be written in a more compact form. The function can be used on the `grid-template-rows` and `grid-template-columns` properties.
 
@@ -46,7 +46,7 @@ Also released with CSS is the new `repeat()` CSS function. As per the spec, `rep
 }
 ```
 
-## `fr` unit
+### `fr` unit
 
 The `fr` data type denotes a flexible length within a grid container. 1fr is for 1 part of the remaining available space (think of it like a fraction).
 
@@ -66,7 +66,7 @@ The `fr` data type denotes a flexible length within a grid container. 1fr is for
 
 <p data-height="265" data-theme-id="0" data-slug-hash="wqQGxJ" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - fr" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/wqQGxJ/">CSS Grid - fr</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-## The `minmax()` function
+### The `minmax()` function
 
 The `minmax()` CSS function, also released with CSS Grid, defines a size range greater than or equal to *min* and less than or equal to *max*. Each value can be a *length*, *percentage*, a *fr* value, or one of the keyword values `max-content`, `min-content` or `auto`.
 
@@ -87,19 +87,19 @@ As a maximum, identical to max-content. As a minimum it represents the largest m
 
 <p data-height="265" data-theme-id="0" data-slug-hash="vJQypY" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - minmax" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/vJQypY/">CSS Grid - minmax</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-# Placing items in a grid
+## Placing items in a grid
 
 In the previous example, the grid items were automatically placed and laid out. You can, however, explicity define where an item resides in a grid and how much room it takes up. Using the `grid-column-start` &amp; `grid-column-end`, along with `grid-row-start` and `grid-row-end` properties, you can define an item's placement. These properties can be combined into the `grid-column` and `grid-row` shorthand properties, using a slash (`/`) to seperate the start and end values. Examples of all of these properties can be seen below.
 
 <p data-height="265" data-theme-id="0" data-slug-hash="xLQZvz" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - Item placement" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/xLQZvz/">CSS Grid - Item placement</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-## Using `space-around` and `space-between`
+### Using `space-around` and `space-between`
 
 When creating a grid where the tracks have absolute sizes and in total are smaller than the area of the parent grid container you can use the `align-content: space-around` and `justify-content: space-between` properties to spread grid-items around to the bounds of the container. This creates extra space around the tracks and increases any gutter specified with `grid-gap`. When elements span more than one track (and therefore cross a gutter), they also gain this extra space.
 
 <p data-height="265" data-theme-id="0" data-slug-hash="rzQWrZ" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - space-around/space-between" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/rzQWrZ/">CSS Grid - space-around/space-between</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-## `grid-template-areas`
+### `grid-template-areas`
 
 Using the `grid-template-areas` property on the grid container defines a grid template by referencing the names of the grid areas which are specificed with the `grid-area` property. Repeating the name of a grid area causes the content to span those cells. A full stop represents an empty cell. This syntax is useful for providing a visualsation of the structure of the grid.
 
@@ -145,9 +145,9 @@ The design requires a layout with three columns, with the main page content in o
 
 <p data-height="265" data-theme-id="0" data-slug-hash="XayoKd" data-default-tab="css,result" data-user="alex-saunders" data-embed-version="2" data-pen-title="CSS Grid - Holy Grail Layout" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/alex-saunders/pen/XayoKd/">CSS Grid - Holy Grail Layout</a> by Alex Saunders (<a href="https://codepen.io/alex-saunders">@alex-saunders</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-# Caveats
+## Caveats
 
-## Browser Support
+### Browser Support
 
 Although CSS Grid provides a great new way of laying out pages, it's still being introduced by all major browser vendors and is not fully supported as of yet. Using vender prefixes is strongly recommended in order to get a consistent experience across all major browsers (a good website for finding which vendor prefixes are required can be found [here](http://shouldiprefix.com/)). The current state of CSS Grid can be seen below:
 
@@ -157,7 +157,7 @@ Although CSS Grid provides a great new way of laying out pages, it's still being
 
 The original Grid implementation was a part of IE10. However, this implementation is now vastly different to the current spec and IE has said it will never update to the new specification, the original spec created for IE10 (&amp; IE11) can be viewed [here](https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/). Rachel Andrew has a [great article](https://24ways.org/2012/css3-grid-layout/) on using the IE implemtation.
 
-## Bugs
+### Bugs
 
 CSS Grid is not without its fair share of bugs. Rachel Andrew has been collecting a community curated list of CSS Grid Layout bugs, incomplete implementations and interop issues. This handy list can be found [here](https://github.com/rachelandrew/gridbugs). 
 
