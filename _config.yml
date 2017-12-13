@@ -17,7 +17,6 @@ markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
 strict_front_matter:  false
 
 # Filtering Content
-show_drafts: null
 limit_posts: 0
 future:      false
 unpublished: false
