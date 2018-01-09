@@ -15,14 +15,12 @@ const shell = fs.readFileSync(path.join(__dirname, '_site', 'shell.html'), 'utf-
 const shellStart = shell.slice(0, shell.indexOf(splitPoint));
 const shellEnd = shell.slice(shell.indexOf(splitPoint) + splitPoint.length);
 
-const shellStartPath = `/assets/dist/static/shell-end-${createHash(shellStart)}.html`;
+const shellStartPath = `/assets/dist/static/shell-start-${createHash(shellStart)}.html`;
 const shellEndPath = `/assets/dist/static/shell-end-${createHash(shellEnd)}.html`;
 const offlinePath = `/offline-${createHash(offline)}.html`;
 
 const app = express();
 const port = (process.env.PORT || 8080);
-
-console.log(process.env.NODE_ENV)
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
@@ -33,6 +31,7 @@ if (process.env.NODE_ENV !== 'production') {
 const router = express.Router();
 
 router.use((req, res, next) => {
+  res.set('Strict-Transport-Security', 'max-age=63072000');
   res.set('Cache-Control', 'no-cache');
   next();
 });
