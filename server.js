@@ -5,6 +5,8 @@ const { promisify } = require('util');
 const express       = require('express');
 const staticModule  = require('static-module');
 const enforce       = require('express-sslify');
+const csp           = require(`helmet-csp`)
+
 
 function createHash(content) {
   return crypto.createHash('md5').update(content).digest('hex').slice(0, 10);
@@ -21,7 +23,7 @@ const shellEndPath = `/assets/dist/static/shell-end-${createHash(shellEnd)}.html
 const offlinePath = `/offline-${createHash(offline)}.html`;
 
 const app = express();
-const port = (process.env.PORT || 8080);
+const port = (process.env.PORT || 8082);
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
@@ -33,6 +35,7 @@ const router = express.Router();
 
 router.use((req, res, next) => {
   res.set('Strict-Transport-Security', 'max-age=63072000');
+  res.set('X-Frame-Options', 'SAMEORIGIN');
   res.set('Cache-Control', 'no-cache');
   next();
 });
@@ -116,6 +119,12 @@ router.use(express.static('_site'));
 if (process.env.NODE_ENV == 'production') {
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
+
+app.use(csp({
+  directives: {
+    'frame-ancestors': ["'self'"]
+  }
+}));
 
 app.use(router);
 
