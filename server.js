@@ -26,6 +26,16 @@ const app = express();
 const port = (process.env.PORT || 8082);
 const liveReloadPort = 9090;
 
+const cspDirectives = {
+  'frame-ancestors': ["'self'"],
+  'default-src': ["'self'", 'https:'],
+  'img-src': ["'self'", "www.google-analytics.com"],
+  'script-src': ["'self'", "www.google-analytics.com", "'unsafe-inline'"],
+  'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
+  'object-src': ["'none'"],
+  'report-uri': '/report-violation'
+};
+
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
     port: liveReloadPort,
@@ -120,20 +130,11 @@ router.use(express.static('_site'));
 
 if (process.env.NODE_ENV == 'production') {
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
-}
 
-app.use(csp({
-  directives: {
-    'frame-ancestors': ["'self'"],
-    'default-src': ["'self'", 'https:'],
-    'connect-src': [`ws://localhost:${liveReloadPort}/livereload`],
-    'img-src': ["'self'", "www.google-analytics.com"],
-    'script-src': ["'self'", "www.google-analytics.com", `localhost:${liveReloadPort}`, "'unsafe-inline'"],
-    'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
-    'object-src': ["'none'"],
-    'report-uri': '/report-violation'
-  }
-}));
+  app.use(csp({
+    directives: cspDirectives
+  }));
+}
 
 app.use(router);
 
