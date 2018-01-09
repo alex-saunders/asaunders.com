@@ -4,6 +4,7 @@ const path          = require('path');
 const { promisify } = require('util');
 const express       = require('express');
 const staticModule  = require('static-module');
+const enforce       = require('express-sslify');
 
 function createHash(content) {
   return crypto.createHash('md5').update(content).digest('hex').slice(0, 10);
@@ -111,6 +112,10 @@ router.get(offlinePath, (req, res) => {
 });
 
 router.use(express.static('_site'));
+
+if (process.env.NODE_ENV == 'production') {
+  app.use(enforce.HTTPS());
+}
 
 app.use(router);
 
