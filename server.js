@@ -24,10 +24,11 @@ const offlinePath = `/offline-${createHash(offline)}.html`;
 
 const app = express();
 const port = (process.env.PORT || 8082);
+const liveReloadPort = 9090;
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
-    port: 9090,
+    port: liveReloadPort,
   }));
 }
 
@@ -124,10 +125,11 @@ if (process.env.NODE_ENV == 'production') {
 app.use(csp({
   directives: {
     'frame-ancestors': ["'self'"],
-    'default-src': ["'none'"],
-    'img-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'"],
-    'style-src': ["'self'"],
+    'default-src': ["'self'", 'https:'],
+    'connect-src': [`ws://localhost:${liveReloadPort}/livereload`],
+    'img-src': ["'self'", "www.google-analytics.com"],
+    'script-src': ["'self'", "www.google-analytics.com", `localhost:${liveReloadPort}`, "'unsafe-inline'"],
+    'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
     'object-src': ["'none'"],
     'report-uri': '/report-violation'
   }
