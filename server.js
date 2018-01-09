@@ -123,7 +123,13 @@ if (process.env.NODE_ENV == 'production') {
 
 app.use(csp({
   directives: {
-    'frame-ancestors': ["'self'"]
+    'frame-ancestors': ["'self'"],
+    'default-src': ["'none'"],
+    'img-src': ["'self'"],
+    'script-src': ["'self'", "'unsafe-inline'"],
+    'style-src': ["'self'"],
+    'object-src': ["'none'"],
+    'report-uri': '/report-violation'
   }
 }));
 
