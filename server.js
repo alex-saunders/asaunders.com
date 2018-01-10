@@ -33,7 +33,6 @@ const cspDirectives = {
   'script-src': ["'self'", "www.google-analytics.com", "'unsafe-inline'"],
   'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
   'object-src': ["'none'"],
-  'report-uri': '/report-violation'
 };
 
 if (process.env.NODE_ENV !== 'production') {
