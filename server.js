@@ -137,10 +137,6 @@ if (process.env.NODE_ENV == 'production') {
   }));
 }
 
-app.use(csp({
-  directives: cspDirectives
-}));
-
 app.use(router);
 
 app.set('host', "0.0.0.0");
