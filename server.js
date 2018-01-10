@@ -30,7 +30,7 @@ const cspDirectives = {
   'frame-ancestors': ["'self'"],
   'default-src': ["'self'", 'https:'],
   'img-src': ["'self'", "www.google-analytics.com"],
-  'script-src': ["'self'", "www.google-analytics.com"],
+  'script-src': ["'self'", "www.google-analytics.com", "'unsafe-inline'"],
   'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
   'object-src': ["'none'"],
   'report-uri': '/report-violation'
