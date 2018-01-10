@@ -30,7 +30,7 @@ const cspDirectives = {
   'frame-ancestors': ["'self'"],
   'default-src': ["'self'", 'https:'],
   'img-src': ["'self'", "www.google-analytics.com"],
-  'script-src': ["'self'", "www.google-analytics.com", "'unsafe-inline'"],
+  'script-src': ["'self'", "www.google-analytics.com"],
   'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
   'object-src': ["'none'"],
   'report-uri': '/report-violation'
@@ -49,6 +49,7 @@ router.use((req, res, next) => {
   res.set('X-Frame-Options', 'SAMEORIGIN');
   res.set('X-Content-Type-Options', 'nosniff');
   res.set('Cache-Control', 'no-cache');
+  res.set('X-XSS-Protection', '1');
   next();
 });
 
@@ -135,6 +136,10 @@ if (process.env.NODE_ENV == 'production') {
     directives: cspDirectives
   }));
 }
+
+app.use(csp({
+  directives: cspDirectives
+}));
 
 app.use(router);
 
