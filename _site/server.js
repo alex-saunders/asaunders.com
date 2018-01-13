@@ -4,6 +4,9 @@ const path          = require('path');
 const { promisify } = require('util');
 const express       = require('express');
 const staticModule  = require('static-module');
+const enforce       = require('express-sslify');
+const csp           = require(`helmet-csp`)
+
 
 function createHash(content) {
   return crypto.createHash('md5').update(content).digest('hex').slice(0, 10);
@@ -15,25 +18,37 @@ const shell = fs.readFileSync(path.join(__dirname, '_site', 'shell.html'), 'utf-
 const shellStart = shell.slice(0, shell.indexOf(splitPoint));
 const shellEnd = shell.slice(shell.indexOf(splitPoint) + splitPoint.length);
 
-const shellStartPath = `/assets/dist/static/shell-end-${createHash(shellStart)}.html`;
+const shellStartPath = `/assets/dist/static/shell-start-${createHash(shellStart)}.html`;
 const shellEndPath = `/assets/dist/static/shell-end-${createHash(shellEnd)}.html`;
 const offlinePath = `/offline-${createHash(offline)}.html`;
 
 const app = express();
-const port = (process.env.PORT || 8080);
+const port = (process.env.PORT || 8082);
+const liveReloadPort = 9090;
 
-console.log(process.env.NODE_ENV)
+const cspDirectives = {
+  'frame-ancestors': ["'self'"],
+  'default-src': ["'self'", 'https:'],
+  'img-src': ["'self'", "www.google-analytics.com"],
+  'script-src': ["'self'", "www.google-analytics.com", "'unsafe-inline'"],
+  'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
+  'object-src': ["'none'"],
+};
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('connect-livereload')({
-    port: 9090,
+    port: liveReloadPort,
   }));
 }
 
 const router = express.Router();
 
 router.use((req, res, next) => {
+  res.set('Strict-Transport-Security', 'max-age=63072000');
+  res.set('X-Frame-Options', 'SAMEORIGIN');
+  res.set('X-Content-Type-Options', 'nosniff');
   res.set('Cache-Control', 'no-cache');
+  res.set('X-XSS-Protection', '1');
   next();
 });
 
@@ -112,6 +127,14 @@ router.get(offlinePath, (req, res) => {
 });
 
 router.use(express.static('_site'));
+
+if (process.env.NODE_ENV == 'production') {
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
+  app.use(csp({
+    directives: cspDirectives
+  }));
+}
 
 app.use(router);
 

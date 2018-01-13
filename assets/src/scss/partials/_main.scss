@@ -179,7 +179,7 @@
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
       &:active {
-        transform: scale(1.03);
+        transform: scale(1.01);
       }
     }
 
@@ -193,6 +193,7 @@
     .preview-wrapper {
       box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
       background-color: $primary-2;
+      transition: all 250ms cubic-bezier(.02,.01,.47,1);
 
       &:after {
         display: block;
@@ -208,17 +209,23 @@
 
         opacity: 0;
         transform: scale(0.8);
-        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 250ms cubic-bezier(.02,.01,.47,1);
       }
-      &:hover:after, &:active:after {
-        opacity: 1;
-        transform: scale(1);
+      &:hover, &:active {
+
+        transform: translate(0,-10px);
+
+        &:after {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
 
       .preview-link {
         width: 100%;        
         display: inline-block;
         text-decoration: none;
+        background-color: $primary-2;;
 
         .preview-img {
           height: 90px;
@@ -306,6 +313,7 @@
       .preview-footer {
         display: flex;
         justify-content: space-between;
+        background-color: $primary-2;;
         font-size: 16px;
         height: 56px;
         padding: 16px 12px;
