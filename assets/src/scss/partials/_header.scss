@@ -1,5 +1,6 @@
 @import '../constants';
 @import '../theme';
+@import '../mixins';
 
 .header {
   position: relative;
@@ -9,21 +10,22 @@
   align-items: center;
   background: none;
 
-  &:before {
-    display: block;
-    content: '';
+  /* Don't like this anymore */
+  // &:before {
+  //   display: block;
+  //   content: '';
 
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
 
-    @media #{$desktop} {
-      background: linear-gradient(to top, rgba(255,0,0,0), $primary-2);
-    }
-  }
+  //   @media #{$desktop} {
+  //     background: linear-gradient(to top, rgba(255,0,0,0), $page-background-light);
+  //   }
+  // }
 
   .nav {
     width: 100%;
@@ -36,8 +38,11 @@
 
     .nav-item {
       cursor: pointer;
-      color: #fff;
+      // color: $body-accent-text;
+      font-size: 16px;
       text-decoration: none;
+
+      @include block-link();
     }
     .nav-item:not(.accent) {
       opacity: 0.7;
@@ -56,12 +61,13 @@
       .logo-img {
         width: 24px;
         height: 24px;
+        box-shadow: 0px 3px 30px rgba(0,0,0,0.1);
       }
       .logo-text {
-        margin-left: 16px;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 700;
+        margin-left: 4px;
+        padding: 8px;
+        
+        @include bold-link();
       }
     }
     .nav-main {
@@ -81,16 +87,8 @@
           padding: 0 8px;
           display: inline-flex;
           align-items: center;
-          border: 1px solid $accent-1;
-          border-radius: 3px;
-
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 700;
-
-          &:hover,&.active {
-            background: $accent-1;
-          }
+          
+          @include bold-link();
         }
       }
     }

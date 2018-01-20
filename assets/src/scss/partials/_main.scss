@@ -2,17 +2,17 @@
 @import '../mixins';
 
 .page-container--gradient {
-  background-image: linear-gradient(to bottom, $primary-2 56px, $primary-1 400px);
+  background-image: linear-gradient(to bottom, $page-background-light 56px, $page-background-dark 400px);
 
   .content-wrapper {
-    background-color: $primary-1;
+    background-color: $page-background-dark;
   }
 }
 .page-container--block {
-  background-color: $primary-2;
+  background-color: $page-background-light;
 
   .content-wrapper {
-    background-color: $primary-1;
+    background-color: $page-background-dark;
   }
 }
 .page-container--gradient, .page-container--block {
@@ -33,12 +33,12 @@
     margin: 0;
     padding: 4px 8px;
     border-radius: 3px;
-    color: $accent-1-text;
-    background-color: $accent-1;
+    color: $body-accent-text;
+    border: 1px solid $accent-1;
 
     text-transform: capitalize;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .content-wrapper {
@@ -150,7 +150,8 @@
             flex-shrink: 0;
           }
           .date, .tags {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
           }
           .tags {
             padding: 0 8px 0 4px;
@@ -191,8 +192,10 @@
     }
 
     .preview-wrapper {
-      box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-      background-color: $primary-2;
+      box-shadow: 0 3px 30px rgba(0,0,0,.05);
+      background-color: $primary-1;
+      border: 1px solid $primary-2;
+      border-radius: 3px;
       transition: all 250ms cubic-bezier(.02,.01,.47,1);
 
       &:after {
@@ -205,7 +208,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        box-shadow: 0px 12px 14px rgba(0,0,0,0.4);
+        box-shadow: 0px 12px 30px rgba(0,0,0,0.05);
 
         opacity: 0;
         transform: scale(0.8);
@@ -225,7 +228,7 @@
         width: 100%;        
         display: inline-block;
         text-decoration: none;
-        background-color: $primary-2;;
+        background-color: $primary-1;
 
         .preview-img {
           height: 90px;
@@ -234,6 +237,7 @@
           overflow: hidden;
           background-color: #476079;
           background-size: cover;
+          border-bottom: 1px solid $primary-2;
 
           &:after {
             display: block;
@@ -265,13 +269,11 @@
             display: flex;
             align-items: center;
             padding: 8px 16px;
-            font-size: 20px;
-            color: $body-accent-text;
-            background: $accent-2;
+            background: $primary-1;
             font-weight: 400;
             text-align: left;
             transform: translateX(-14px);
-            box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+            box-shadow: 0px 3px 30px rgba(0,0,0,0.05);
             margin: 0;
 
             &:after {
@@ -284,7 +286,7 @@
               border-width: 5px;
               width: 0;
               height: 0;
-              border-color: $accent-1 $accent-1 transparent transparent;
+              border-color: $primary-2 $primary-2 transparent transparent;
             }
 
             span {
@@ -293,6 +295,10 @@
               -webkit-line-clamp: 2;
               overflow: hidden;
               text-overflow: ellipsis;
+
+              font-size: 19px;
+              font-weight: 600;
+              color: $body-accent-text;
             }
             
           }
@@ -304,8 +310,7 @@
             color: $body-text;
             text-align: left;
             text-decoration: none;
-            font-size: 16px;
-            line-height: 1.35;
+            line-height: 1.75;
           }
         }
       }
@@ -313,8 +318,8 @@
       .preview-footer {
         display: flex;
         justify-content: space-between;
-        background-color: $primary-2;;
-        font-size: 16px;
+        background-color: $primary-1;
+        border-top: 1px solid $primary-2;
         height: 56px;
         padding: 16px 12px;
 
@@ -322,8 +327,14 @@
           display: flex;
           align-items: center;
           overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           color: $body-text;
           padding: 0 4px;
+
+          &:last-child {
+            flex-shrink: 0;
+          }
 
           svg {
             fill: $body-text;
@@ -333,14 +344,15 @@
             flex-shrink: 0;
           }
           .date, .tags {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
           }
           .tags {
             height: 100%;
             padding: 0;
 
             li {
-              margin: 0;
+              margin: 0 2px;
             }
           }
           .date {
@@ -353,9 +365,6 @@
   }
 
   .post-preview, .post-preview--featured {
-    .date, .tags {
-      display: inline-block;
-    }
     .tags {
       height: 100%;
       padding: 0;
@@ -391,9 +400,8 @@
       padding: 8px 8px;
       margin: 0 4px;
       border-radius: 3px;
-      border: 1px solid $primary-2;
 
-      @include block-link();
+      @include bold-link();
 
       svg {
         height: 16px;
@@ -405,7 +413,12 @@
       
 
       &:hover:not(.disabled), &.active:not(.disabled) {
-        background: $primary-2;
+        background: $accent-1;
+        color: $accent-1-text;
+
+        svg {
+          fill: $accent-1-text;
+        }
       }
       &:only-child {
         @media #{$mobile} {
@@ -442,9 +455,10 @@
       }
     }
     h1 {
+      color: $body-accent-text;
       position: relative;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 600;
       text-transform: capitalize;
       margin: 16px 0;
       padding: 0 0 4px 0;
@@ -456,8 +470,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        border-bottom: 1px solid $body-text;
-        opacity: 0.2;
+        border-bottom: 1px solid $primary-2;
       }
     }
     .social {
@@ -486,6 +499,12 @@
               height: 16px;
               margin-right: 8px;
             }
+          }
+        }
+
+        .social--github {
+          path {
+            fill: $body-accent-text;
           }
         }
     }

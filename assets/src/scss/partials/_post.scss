@@ -14,15 +14,15 @@
   .post-details {
     position: relative;
     padding: 0 16px 0 16px;
-    margin: 0 16px 16px -100px;
+    margin: 0 32px 16px -100px;
     float: left;
     max-width: 200px;
     border-width: 0px;
     border-style: solid;
     border-color: $accent-1;
     border-top-width: 3px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    background: $primary-2;
+    box-shadow: 0px 3px 30px rgba(0,0,0,0.05);
+    background: $primary-1;
 
     @media #{$tablet} {
       margin: 0 16px 16px 0;
@@ -84,7 +84,8 @@
       border-width: 10px;
       width: 0;
       height: 0;
-      border-color: $primary-3 $primary-3 transparent transparent;
+      border-color: $primary-2 $primary-2 transparent transparent;
+      opacity: 0.7;
     }
   }
   .post-content {
@@ -137,6 +138,10 @@
         }
       }
     }
+    code {
+      font-size: 12px;
+      font-family: 'Roboto Mono', monospace;
+    }
     .highlighter-rouge {
       width: 100%;
 
@@ -148,7 +153,7 @@
           padding: 0 0 0 8px;
         }
         td, span {
-          font-size: 16px;
+          font-size: 12px;
           font-family: 'Roboto Mono', monospace;          
         }
       }

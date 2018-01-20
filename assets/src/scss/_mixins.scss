@@ -12,7 +12,7 @@
 @mixin block-link() {
   color: $link-text;
   text-decoration: none;
-  transition: all 0.1s linear;
+  transition: all 0.05s linear;
   
   svg {
     fill: $link-text;
@@ -26,6 +26,25 @@
     color: $accent-1;
     svg {
       fill: $accent-1;
+    }
+  }
+}
+
+@mixin bold-link() {
+  color: $body-accent-text;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: pointer;
+  
+  &:hover,&.active {
+    background: $accent-1;
+    color: $accent-1-text;
+
+    svg {
+      fill: $accent-1-text;
     }
   }
 }

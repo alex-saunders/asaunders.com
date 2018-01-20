@@ -14,9 +14,10 @@ I aim to use this space to keep an updated list of things I recently learnt and 
     margin: 16px 0;
   }
   figure.example figcaption {
-    font-size: 22px;
+    font-size: 16px;
     text-align: center;
     background: #0e2439;
+    color: #fff;
   }
   figure.example .fill {
     margin: 8px auto;
